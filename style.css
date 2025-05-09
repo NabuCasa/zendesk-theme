@@ -222,6 +222,20 @@ h6,
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
+h1#related-topics,
+h2#related-topics,
+h3#related-topics,
+h4#related-topics,
+h5#related-topics,
+h6#related-topics,
+.h1#related-topics,
+.h2#related-topics,
+.h3#related-topics,
+.h4#related-topics,
+.h5#related-topics,
+.h6#related-topics {
+  margin-top: 1rem;
+}
 
 h1,
 .h1 {
@@ -2531,6 +2545,18 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   line-height: 1.6;
   margin-bottom: 40px;
   word-wrap: break-word;
+}
+.article-content ol,
+.article-content ul {
+  margin: 0;
+}
+.article-content ol p,
+.article-content ul p {
+  margin: 0;
+}
+.article-content ol li,
+.article-content ul li {
+  margin: 0.5rem 0;
 }
 .article-footer {
   align-items: center;
@@ -5597,8 +5623,4 @@ zd-summary-block {
 .steps .step .step-content-wrapper .step-content {
   flex-basis: 300px;
   flex-grow: 1;
-}
-.steps .step .step-content-wrapper .step-content ol,
-.steps .step .step-content-wrapper .step-content ul {
-  margin: 0;
 }
