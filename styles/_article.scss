@@ -105,6 +105,19 @@
     line-height: 1.6;
     margin-bottom: 40px;
     word-wrap: break-word;
+
+    ol,
+    ul {
+      margin: 0;
+
+      p {
+        margin: 0;
+      }
+
+      li {
+        margin: .5rem 0;
+      }
+    }
   }
 
   &-footer {

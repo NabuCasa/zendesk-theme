@@ -2532,6 +2532,18 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   margin-bottom: 40px;
   word-wrap: break-word;
 }
+.article-content ol,
+.article-content ul {
+  margin: 0;
+}
+.article-content ol p,
+.article-content ul p {
+  margin: 0;
+}
+.article-content ol li,
+.article-content ul li {
+  margin: 0.5rem 0;
+}
 .article-footer {
   align-items: center;
   display: flex;
@@ -5597,8 +5609,4 @@ zd-summary-block {
 .steps .step .step-content-wrapper .step-content {
   flex-basis: 300px;
   flex-grow: 1;
-}
-.steps .step .step-content-wrapper .step-content ol,
-.steps .step .step-content-wrapper .step-content ul {
-  margin: 0;
 }
