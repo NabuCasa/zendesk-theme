@@ -11,7 +11,8 @@
       <div class="nav-wrapper-desktop">
         <nav class="user-nav" id="user-nav" aria-label="{{t 'user_navigation'}}">
           <ul class="user-nav-list">
-            <li><a href="https://community.home-assistant.io" target="_blank" rel="noopener" class="btn btn-text btn-text-light external-link">Community</a></li>
+            <li><a href="https://community.home-assistant.io" target="_blank" rel="noopener" class="btn btn-text btn-text-light external-link">Community forum</a></li>
+            <li><a href="https://www.home-assistant.io/join-chat/" target="_blank" rel="noopener" class="btn btn-text btn-text-light external-link">Discord chat server</a></li>
             <li>{{#link 'new_request' class='submit-a-request btn btn-white'}}Submit a ticket{{/link}}</li>
           </ul>
         </nav>
@@ -72,7 +73,8 @@
               </li>
               <li class="nav-divider"></li>
             {{/if}}
-            <li class="item">{{link 'community' role="menuitem"}}</li>
+            <li class="item"><a href="https://community.home-assistant.io" target="_blank" rel="noopener">Community forum</a></li>
+            <li class="item"><a href="https://www.home-assistant.io/join-chat/" target="_blank" rel="noopener">Discord chat server</a></li>
             <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
             <li class="nav-divider"></li>
             {{#if signed_in}}
