@@ -336,7 +336,7 @@ hr {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
@@ -354,7 +354,7 @@ ul {
 }
 
 .error-page {
-  max-width: 1160px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
@@ -1085,7 +1085,7 @@ nabucasa-zigbee-flasher {
   color: #7C7F80;
 }
 .footer-inner {
-  max-width: 1160px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
@@ -2522,6 +2522,9 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   display: inline-block;
   margin-top: -2px;
 }
+.article-body .videoWrapper {
+  display: flex;
+}
 .article-body .videoWrapper iframe {
   aspect-ratio: 16/9;
   height: auto;
@@ -2531,6 +2534,14 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   line-height: 1.6;
   margin-bottom: 40px;
   word-wrap: break-word;
+}
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  margin-top: 1.5rem;
 }
 .article-content ol,
 .article-content ul {
