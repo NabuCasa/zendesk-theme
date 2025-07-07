@@ -140,7 +140,6 @@
     </aside>
 
     <section id="main-content" class="search-results-column">
-      {{generative_answers}}
       <h1 class="search-results-subheading">
         {{#if results}}
           {{#is current_filter.identifier 'unified'}}
@@ -217,7 +216,7 @@
                     </div>
                   </div>
                   <div class="search-result-meta-container">
-                    <nav
+                    <nav 
                       {{#is type 'article'}}aria-label='{{t 'article_location_with_title' title=title}}'{{/is}}
                       {{#is type 'community_post'}}aria-label='{{t 'post_location_with_title' title=title}}'{{/is}}
                       {{#is type 'external_content_record'}}aria-label='{{t 'external_content_location_with_title' title=title}}'{{/is}}
@@ -257,7 +256,7 @@
                   </path>
                 </svg>
               {{/link}}
-            </div>
+            </div> 
           </div>
       {{/if}}
     </section>
