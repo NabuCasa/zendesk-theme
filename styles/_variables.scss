@@ -73,6 +73,12 @@ $home-assistant-products: (
     hero-image: "https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-zbt-1.webp",
     description: "The easiest way to add Zigbee support to your Home Assistant instance."
   ),
+  "Connect ZWA-2": (color: #005FBE,
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23005FBE'/%3E%3Cpath d='M22 29.5059C17.8634 29.5059 14.4941 26.1366 14.4941 22C14.4941 17.8634 17.8634 14.4941 22 14.4941C26.1366 14.4941 29.5059 17.8634 29.5059 22C29.5059 26.1366 26.1366 29.5059 22 29.5059Z' fill='white'/%3E%3C/svg%3E",
+    product-image: "https://www.home-assistant.io/images/frontpage/zwa-2-frontpage.webp",
+    hero-image: "https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-zwa-2.webp",
+    description: "The ultimate way to connect Z-Wave devices to Home Assistant."
+  ),
   "Cloud": (color: #174B62,
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23174B62'/%3E%3Cpath d='M31.6404 21.9952C31.6404 21.9201 31.6466 21.8461 31.6466 21.7701C31.6454 20.1893 31.1182 18.6516 30.1445 17.3895C29.1708 16.1276 27.8037 15.2098 26.2494 14.775C24.6953 14.3402 23.0386 14.4118 21.5297 14.9793C20.0209 15.5467 18.7418 16.579 17.886 17.9201C17.0104 17.6077 16.0757 17.4867 15.1473 17.5653C14.2188 17.644 13.3193 17.9208 12.5119 18.3758C11.7046 18.831 11.0088 19.4535 10.4738 20.1997C9.93869 20.9459 9.57737 21.7977 9.415 22.6953C9.25263 23.5927 9.29318 24.5141 9.53389 25.3946C9.77459 26.2751 10.2096 27.0934 10.8083 27.7918C11.4071 28.4902 12.1549 29.052 12.9994 29.4375C13.8438 29.8231 14.7644 30.023 15.6961 30.0233H25.9792L26.1412 30.0234H26.4L27.6954 30.0233H31.0521C32.099 30.0293 33.1089 29.6456 33.8771 28.9502C34.6453 28.2548 35.1145 27.2998 35.1892 26.2785C35.2641 25.2574 34.939 24.2465 34.2798 23.4511C33.6209 22.6557 32.6774 22.1352 31.6404 21.9952Z' fill='white'/%3E%3C/svg%3E",
     hero-image: $generic-hero-image )
