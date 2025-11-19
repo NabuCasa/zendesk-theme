@@ -81,6 +81,7 @@
       &[data-name="Home Assistant #{$product}"] {
         &:before {
           background-image: url(map-get($details, icon));
+          background-size: 44px 44px;
           content: '';
         }
 

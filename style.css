@@ -1457,6 +1457,43 @@ section.section.hero[data-category="Home Assistant Connect ZBT-1"] [data-descrip
   content: "The easiest way to add Zigbee support to your Home Assistant instance.";
 }
 
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] {
+  background-image: url("https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-zbt-2.webp");
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero,
+  section.section.hero[data-category="Home Assistant Connect ZBT-2"] {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero,
+  section.section.hero[data-category="Home Assistant Connect ZBT-2"] {
+    margin-bottom: 1rem;
+  }
+}
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero:after,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"]:after {
+  content: "";
+  background-color: rgba(23, 75, 98, 0.58);
+  position: absolute;
+  inset: 0;
+}
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero .hero-inner,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] .hero-inner {
+  color: #fff;
+}
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-title]:before,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-title]:before {
+  content: "Home Assistant Connect ZBT-2";
+}
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-description]:before,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-description]:before {
+  content: "The easiest way to start with Zigbee or Thread is now even better.";
+}
+
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] {
   background-image: url("https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-zwa-2.webp");
@@ -1585,6 +1622,18 @@ section.section.hero[data-category="Home Assistant Connect ZBT-1"]:after {
   inset: 0;
 }
 section.section.hero[data-category="Home Assistant Connect ZBT-1"] .hero-inner {
+  color: #fff;
+}
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] {
+  background-image: url("https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-zbt-2.webp");
+}
+section.section.hero[data-category="Home Assistant Connect ZBT-2"]:after {
+  content: "";
+  background-color: rgba(23, 75, 98, 0.58);
+  position: absolute;
+  inset: 0;
+}
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] .hero-inner {
   color: #fff;
 }
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] {
@@ -2044,6 +2093,11 @@ section.section.hero[data-category="Home Assistant Connect ZBT-1"] ~ .container 
   display: flex;
 }
 
+main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) ~ .container .layout .column.sidebar .item-card.product.product-connect-zbt-2,
+section.section.hero[data-category="Home Assistant Connect ZBT-2"] ~ .container .layout .column.sidebar .item-card.product.product-connect-zbt-2 {
+  display: flex;
+}
+
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) ~ .container .layout .column.sidebar .item-card.product.product-connect-zwa-2,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] ~ .container .layout .column.sidebar .item-card.product.product-connect-zwa-2 {
   display: flex;
@@ -2110,6 +2164,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
 }
 .item-cards .item-card[data-name="Home Assistant Green"]:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%2314CC9E'/%3E%3Cpath d='M30.0231 28.9584C30.0231 29.5441 29.5417 30.0233 28.9533 30.0233H15.0459C14.4575 30.0233 13.9761 29.5441 13.9761 28.9584V23.1012C13.9761 22.5155 14.3184 21.6955 14.7303 21.2855L21.24 14.8054C21.6573 14.3901 22.3366 14.3901 22.7538 14.8054L29.2636 21.2855C29.6808 21.7008 30.0231 22.5181 30.0231 23.1038V28.9584Z' fill='%23fff'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Green"]:hover {
@@ -2117,6 +2172,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
 }
 .item-cards .item-card[data-name="Home Assistant Yellow"]:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23FBB03B'/%3E%3Cpath d='M30.0241 28.9591C30.0241 29.5448 29.5427 30.024 28.9543 30.024H15.0469C14.4585 30.024 13.9771 29.5448 13.9771 28.9591V23.102C13.9771 22.5162 14.3194 21.6962 14.7313 21.2862L21.241 14.8061C21.6582 14.3908 22.3376 14.3908 22.7548 14.8061L29.2645 21.2862C29.6818 21.7016 30.0241 22.5188 30.0241 23.1045V28.9591Z' fill='white'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Yellow"]:hover {
@@ -2124,20 +2180,31 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
 }
 .item-cards .item-card[data-name="Home Assistant Voice Preview Edition"]:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23DB582E'/%3E%3Cpath d='M22 29.5059C17.8634 29.5059 14.4941 26.1366 14.4941 22C14.4941 17.8634 17.8634 14.4941 22 14.4941C26.1366 14.4941 29.5059 17.8634 29.5059 22C29.5059 26.1366 26.1366 29.5059 22 29.5059Z' fill='white'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Voice Preview Edition"]:hover {
   border-color: #DB582E;
 }
 .item-cards .item-card[data-name="Home Assistant Connect ZBT-1"]:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%2300AEF8'/%3E%3Cpath d='M27.9527 13.6545C27.9527 12.6887 27.154 11.9058 26.1688 11.9058H18.3488C17.3637 11.9058 16.5649 12.6887 16.5649 13.6545L16.5649 28.4705H18.6355V33.6469H25.8826V28.4705H27.9532L27.9527 13.6545Z' fill='white'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='256' height='256' viewBox='0 0 256 256' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1070_968)'%3E%3Cpath d='M232.727 0H23.2727C10.4145 0 0 10.4145 0 23.2727V232.727C0 245.585 10.4145 256 23.2727 256H232.727C245.585 256 256 245.585 256 232.727V23.2727C256 10.4145 245.585 0 232.727 0Z' fill='%23005FBE'/%3E%3Cpath d='M162.618 79.4181C162.618 73.7745 157.964 69.2363 152.262 69.2363H106.764C101.004 69.2363 96.4072 73.7745 96.4072 79.4181V165.644H108.451V195.782H150.633V165.644H162.676V79.4181H162.618Z' fill='%23F2F4F9'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1070_968'%3E%3Crect width='256' height='256' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Connect ZBT-1"]:hover {
   border-color: #00AEF8;
 }
+.item-cards .item-card[data-name="Home Assistant Connect ZBT-2"]:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='256' height='256' viewBox='0 0 256 256' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M232.727 0H23.2727C10.4145 0 0 10.4145 0 23.2727V232.727C0 245.585 10.4145 256 23.2727 256H232.727C245.585 256 256 245.585 256 232.727V23.2727C256 10.4145 245.585 0 232.727 0Z' fill='%23005FBE'/%3E%3Cpath d='M135.601 67.2002C136.706 67.2004 137.601 68.0957 137.601 69.2002V161.601H137.626C137.611 161.827 137.603 162.055 137.601 162.285V162.555C137.684 169.111 143.024 174.4 149.599 174.4C149.868 174.4 150.135 174.39 150.4 174.372V174.4H169.6V186.001C169.6 189.314 166.914 192.001 163.6 192.001H92.4C89.0866 192.001 86.4002 189.314 86.4 186.001V174.4H105.6V174.373C105.864 174.39 106.131 174.4 106.4 174.4C113.027 174.4 118.4 169.028 118.4 162.4C118.4 162.132 118.39 161.865 118.373 161.601H118.401V69.2002C118.401 68.0956 119.296 67.2002 120.401 67.2002H135.601Z' fill='%23F2F4F9'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
+  content: "";
+}
+.item-cards .item-card[data-name="Home Assistant Connect ZBT-2"]:hover {
+  border-color: #005FBE;
+}
 .item-cards .item-card[data-name="Home Assistant Connect ZWA-2"]:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23005FBE'/%3E%3Cpath d='M22 29.5059C17.8634 29.5059 14.4941 26.1366 14.4941 22C14.4941 17.8634 17.8634 14.4941 22 14.4941C26.1366 14.4941 29.5059 17.8634 29.5059 22C29.5059 26.1366 26.1366 29.5059 22 29.5059Z' fill='white'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='256' height='256' viewBox='0 0 256 256' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M232.728 3.05176e-05H23.2731C10.4149 3.05176e-05 0.000366211 10.4146 0.000366211 23.2728V232.727C0.000366211 245.585 10.4149 256 23.2731 256H232.728C245.586 256 256 245.585 256 232.727V23.2728C256 10.4146 245.586 3.05176e-05 232.728 3.05176e-05Z' fill='%23005FBE'/%3E%3Cpath d='M135.599 24.0006C136.704 24.0006 137.599 24.896 137.599 26.0006V204.801H137.627C137.609 205.066 137.599 205.332 137.599 205.601C137.6 212.228 142.971 217.601 149.599 217.601C149.867 217.601 150.135 217.591 150.399 217.574V217.601H169.599V229.202C169.598 232.515 166.912 235.202 163.599 235.202H92.3993C89.0857 235.202 86.3994 232.515 86.3993 229.202V217.601H105.599V217.573C105.864 217.59 106.131 217.601 106.4 217.601C113.002 217.601 118.358 212.27 118.399 205.678V205.55C118.398 205.299 118.389 205.049 118.373 204.801H118.399V26.0006C118.399 24.8961 119.295 24.0007 120.399 24.0006H135.599Z' fill='%23F2F4F9'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Connect ZWA-2"]:hover {
@@ -2145,6 +2212,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
 }
 .item-cards .item-card[data-name="Home Assistant Cloud"]:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44' fill='none'%3E%3Cpath d='M40 0H4C1.79086 0 0 1.79086 0 4V40C0 42.2091 1.79086 44 4 44H40C42.2091 44 44 42.2091 44 40V4C44 1.79086 42.2091 0 40 0Z' fill='%23174B62'/%3E%3Cpath d='M31.6404 21.9952C31.6404 21.9201 31.6466 21.8461 31.6466 21.7701C31.6454 20.1893 31.1182 18.6516 30.1445 17.3895C29.1708 16.1276 27.8037 15.2098 26.2494 14.775C24.6953 14.3402 23.0386 14.4118 21.5297 14.9793C20.0209 15.5467 18.7418 16.579 17.886 17.9201C17.0104 17.6077 16.0757 17.4867 15.1473 17.5653C14.2188 17.644 13.3193 17.9208 12.5119 18.3758C11.7046 18.831 11.0088 19.4535 10.4738 20.1997C9.93869 20.9459 9.57737 21.7977 9.415 22.6953C9.25263 23.5927 9.29318 24.5141 9.53389 25.3946C9.77459 26.2751 10.2096 27.0934 10.8083 27.7918C11.4071 28.4902 12.1549 29.052 12.9994 29.4375C13.8438 29.8231 14.7644 30.023 15.6961 30.0233H25.9792L26.1412 30.0234H26.4L27.6954 30.0233H31.0521C32.099 30.0293 33.1089 29.6456 33.8771 28.9502C34.6453 28.2548 35.1145 27.2998 35.1892 26.2785C35.2641 25.2574 34.939 24.2465 34.2798 23.4511C33.6209 22.6557 32.6774 22.1352 31.6404 21.9952Z' fill='white'/%3E%3C/svg%3E");
+  background-size: 44px 44px;
   content: "";
 }
 .item-cards .item-card[data-name="Home Assistant Cloud"]:hover {
@@ -2221,6 +2289,9 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
 }
 .item-cards .item-card.product-connect-zbt-1 {
   background-image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg");
+}
+.item-cards .item-card.product-connect-zbt-2 {
+  background-image: url("https://www.home-assistant.io/images/frontpage/zbt-2-frontpage.webp");
 }
 .item-cards .item-card.product-connect-zwa-2 {
   background-image: url("https://www.home-assistant.io/images/frontpage/zwa-2-frontpage.webp");
