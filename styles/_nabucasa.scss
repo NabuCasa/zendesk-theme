@@ -829,10 +829,12 @@ section.section.hero[data-category="Home Assistant Cloud"] {
       grid-template-columns: repeat(2, max-content);
     }
 
+    // One row aligned right on desktop; left-aligned columns when stacked
     @include desktop {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem 3rem;
+      justify-content: flex-end;
     }
   }
 

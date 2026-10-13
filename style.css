@@ -6434,6 +6434,7 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 3rem;
+    justify-content: flex-end;
   }
 }
 .footer-links a {
