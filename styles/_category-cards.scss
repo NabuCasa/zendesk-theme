@@ -7,18 +7,27 @@
 // in the order the cards appear on the home page (whatever order Zendesk returns
 // them in). Categories without an entry come last, as plain gray cards.
 //
-// Tall devices set `floor`: their photo (cropped just below the device) then
-// stops above the boxes so the whole device stays visible, and the space behind
-// the boxes is filled with a gradient matching the photo's bottom edge.
+// Tall devices set `floor`: their photo (cropped just below the device and
+// widened with its own backdrop) stops above the boxes so the whole device stays
+// visible, and the space behind the boxes gets a gradient matching the photo's
+// bottom edge.
 $category-cards: (
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray)),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#d1bba7, #af9b82)),
-  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c3ae98, #816c53)),
+  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#d2bbaa, #a79278)),
+  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c1ae99, #716049)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
   "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
   "Yellow": (image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg"), color: var(--nc-color-sun)),
 );
+
+// The cards go two-up only when the space they sit in (not the screen) is wide
+// enough for two readable cards; below that they stack in a single column.
+$home-sidebar-width: 1280px;
+
+.categories.blocks {
+  container-type: inline-size;
+}
 
 .category-cards {
   display: grid;
@@ -26,8 +35,15 @@ $category-cards: (
   grid-auto-rows: minmax(28rem, auto);
   grid-template-columns: minmax(0, 1fr);
 
-  // Roughly the 6:7 proportions of the nabucasa.com image cards
+  // Single wide cards would crop the device photos too much, so cap their width
   @include tablet {
+    grid-template-columns: minmax(0, 40rem);
+  }
+}
+
+// Roughly the 6:7 proportions of the nabucasa.com image cards
+@container (min-width: 46rem) {
+  .category-cards {
     grid-auto-rows: minmax(clamp(30rem, 40vw, 36rem), auto);
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -75,6 +91,8 @@ $category-cards: (
         $floor: map-get($card, floor);
         background-image: linear-gradient(90deg, nth($floor, 1), nth($floor, 2));
 
+        // The photo is pre-widened with its plain backdrop, so at any card width
+        // it can be scaled to its full height and the whole device stays in view
         &::before {
           background: map-get($card, image) center bottom / cover no-repeat;
           content: "";
@@ -175,4 +193,31 @@ $category-cards: (
 // The home page masthead uses the tin blue from the nabucasa.com palette
 .hero.hero-home {
   background-color: var(--nc-color-tin);
+}
+
+// Home page: the help sidebar sits below the categories until there is room for
+// it beside two columns of cards, and its cards sit side by side there.
+.home-layout {
+  @media (max-width: #{$home-sidebar-width - 1px}) {
+    flex-direction: column;
+
+    // Fixed sizing: a flex-basis of 0 makes the browser measure the cards at a
+    // narrower width first, so the column ended up sized for single-column cards
+    > .column {
+      flex: none;
+      width: 100%;
+    }
+
+    > .column.sidebar {
+      flex: 1 1 auto;
+      margin-top: calc(var(--nc-section-gap) - var(--nc-stack-gap));
+
+      .item-cards {
+        @include tablet {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    }
+  }
 }
