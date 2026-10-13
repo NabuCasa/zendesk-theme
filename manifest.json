@@ -13,7 +13,7 @@
           "type": "color",
           "description": "brand_color_description",
           "label": "brand_color_label",
-          "value": "#17494D"
+          "value": "#1F1F1C"
         },
         {
           "identifier": "brand_text_color",
@@ -27,28 +27,28 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#2F3941"
+          "value": "#1F1F1C"
         },
         {
           "identifier": "link_color",
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "#1F73B7"
+          "value": "#1F1F1C"
         },
         {
           "identifier": "hover_link_color",
           "type": "color",
           "description": "hover_link_color_description",
           "label": "hover_link_color_label",
-          "value": "#0F3554"
+          "value": "#C05811"
         },
         {
           "identifier": "visited_link_color",
           "type": "color",
           "description": "visited_link_color_description",
           "label": "visited_link_color_label",
-          "value": "#9358B0"
+          "value": "#5C5B52"
         },
         {
           "identifier": "background_color",
