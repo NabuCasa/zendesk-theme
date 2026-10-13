@@ -6128,6 +6128,10 @@ hr {
 .dropdown-menu .separator {
   border-color: var(--nc-color-white);
 }
+.dropdown-menu [role=separator]:last-child,
+.dropdown-menu [role=separator] + [role=separator] {
+  display: none;
+}
 
 /***** Hero *****/
 .hero {

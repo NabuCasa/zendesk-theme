@@ -449,6 +449,13 @@ hr {
   .separator {
     border-color: var(--nc-color-white);
   }
+
+  // Zendesk doesn't always render the links after the divider (Sign out is
+  // missing in theme preview), so only show it when something follows
+  [role="separator"]:last-child,
+  [role="separator"] + [role="separator"] {
+    display: none;
+  }
 }
 
 /***** Hero *****/
