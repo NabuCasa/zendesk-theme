@@ -14,7 +14,7 @@
 $category-cards: (
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray)),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#d2bbaa, #a79278)),
+  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#cdb7a1, #89755c)),
   "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c1ae99, #716049)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
   "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
