@@ -1343,7 +1343,7 @@ section.section.hero[data-category="Home Assistant Green"] [data-title]:before {
 }
 main > .visibility-hidden:has(ol li a[href$=Green]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Green"] [data-description]:before {
-  content: "The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.";
+  content: "The easiest way to start using Home Assistant. Get started in minutes and build a fully private smart home, all in one app.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Yellow]) + section.hero,
@@ -1417,7 +1417,7 @@ section.section.hero[data-category="Home Assistant Voice Preview Edition"] [data
 }
 main > .visibility-hidden:has(ol li a[href$=Voice-Preview-Edition]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Voice Preview Edition"] [data-description]:before {
-  content: "Built for Home Assistant - Easy Setup - one USB-C cable and setup wizard, no assembly required.";
+  content: "A voice assistant designed around privacy and local control that looks and feels great in the home.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero,
@@ -1491,7 +1491,7 @@ section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-title]:
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-description]:before {
-  content: "The easiest way to start with Zigbee or Thread is now even better.";
+  content: "This adapter is the easiest way to add Zigbee or Thread (Matter) devices to Home Assistant – with the highest performance and stability.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero,
@@ -1528,7 +1528,7 @@ section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-title]:
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-description]:before {
-  content: "The ultimate way to connect Z-Wave devices to Home Assistant.";
+  content: "A super powerful Z-Wave adapter giving maximum range and reliability, including support for Z-Wave Long Range.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero,
