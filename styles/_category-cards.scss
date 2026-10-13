@@ -6,11 +6,15 @@
 // Photo and title colour for each category, keyed by category name and listed
 // in the order the cards appear on the home page (whatever order Zendesk returns
 // them in). Categories without an entry come last, as plain gray cards.
+//
+// Tall devices set `floor`: their photo (cropped just below the device) then
+// stops above the boxes so the whole device stays visible, and the space behind
+// the boxes is filled with a gradient matching the photo's bottom edge.
 $category-cards: (
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray)),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin)),
-  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin)),
+  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#d1bba7, #af9b82)),
+  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c3ae98, #816c53)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
   "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
   "Yellow": (image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg"), color: var(--nc-color-sun)),
@@ -19,11 +23,12 @@ $category-cards: (
 .category-cards {
   display: grid;
   gap: var(--nc-stack-gap);
-  grid-auto-rows: minmax(26rem, auto);
+  grid-auto-rows: minmax(28rem, auto);
   grid-template-columns: minmax(0, 1fr);
 
+  // Roughly the 6:7 proportions of the nabucasa.com image cards
   @include tablet {
-    grid-auto-rows: minmax(clamp(26rem, 34vw, 32rem), auto);
+    grid-auto-rows: minmax(clamp(30rem, 40vw, 36rem), auto);
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     // Cloud leads as a double-width card, as the first card does on nabucasa.com
@@ -65,7 +70,24 @@ $category-cards: (
     &[data-name="Home Assistant #{$name}"] {
       --card-title-color: #{map-get($card, color)};
       order: index($category-cards, ($name $card));
-      background-image: map-get($card, image);
+
+      @if map-has-key($card, floor) {
+        $floor: map-get($card, floor);
+        background-image: linear-gradient(90deg, nth($floor, 1), nth($floor, 2));
+
+        &::before {
+          background: map-get($card, image) center bottom / cover no-repeat;
+          content: "";
+          flex: 1 1 auto;
+          margin: -0.75rem -0.75rem 0;
+
+          @include tablet {
+            margin: -1rem -1rem 0;
+          }
+        }
+      } @else {
+        background-image: map-get($card, image);
+      }
     }
   }
 
