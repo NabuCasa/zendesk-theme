@@ -6183,6 +6183,20 @@ section.section.hero::after {
   background-color: rgba(31, 31, 28, 0.45) !important;
 }
 
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero,
+section.section.hero[data-category="Home Assistant Cloud"] {
+  background-color: var(--nc-color-tin);
+  background-image: none;
+}
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero::after,
+section.section.hero[data-category="Home Assistant Cloud"]::after {
+  content: none;
+}
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero .hero-inner,
+section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
+  color: var(--nc-color-charcoal);
+}
+
 /***** Search *****/
 .search input[type=search],
 .search .clear-button {
