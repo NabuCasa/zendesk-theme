@@ -1,5 +1,5 @@
 
-<section id="main-content" class="section hero">
+<section id="main-content" class="section hero hero-home">
   <div class="hero-inner">
     <div class="container">
       <div class="hero-heading">
@@ -20,27 +20,19 @@
     <div class="column">
       <section class="section knowledge-base">
         <section class="categories blocks">
-          <div class="item-cards">
+          <div class="category-cards">
             {{#each categories}}
-              {{#if ../has_multiple_categories}}
-                <a href='{{url}}' class="item-card" data-name="{{ name }}">
-                  <div class="item-card-details">
-                    <div class="item-card-content">
-                      <span class="item-card-title">{{name}}</span>
-                      <span class="item-card-description">{{description}}</span>
-                    </div>
+              <a href="{{url}}" class="category-card" data-name="{{name}}">
+                <div class="category-card-content">
+                  <div class="category-card-title">
+                    <h3>{{name}}</h3>
                   </div>
-                </a>
-              {{else}}
-                <a href='{{url}}' class="item-card" data-name="{{ name }}">
-                  <div class="item-card-details">
-                    <div class="item-card-content">
-                      <span class="item-card-title">{{name}}</span>
-                      <span class="item-card-description">{{description}}</span>
-                    </div>
+                  <div class="category-card-description">
+                    {{#if description}}<p>{{description}}</p>{{/if}}
+                    <span class="category-card-cta">View articles</span>
                   </div>
-                </a>
-              {{/if}}
+                </div>
+              </a>
             {{/each}}
           </div>
           {{pagination}}

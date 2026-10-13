@@ -264,6 +264,11 @@ hr {
     .header {
       background-color: var(--nc-color-sun);
     }
+
+    // Logo turns black on the sun panel, as on the nabucasa.com mobile menu
+    .logo img {
+      filter: brightness(0);
+    }
   }
 }
 
