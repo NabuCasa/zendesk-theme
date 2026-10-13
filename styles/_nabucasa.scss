@@ -810,36 +810,13 @@ section.section.hero[data-category="Home Assistant Cloud"] {
     }
   }
 
-  // Logo on the left, links grouped on the right (stacked on small screens)
   &-panel {
-    align-items: flex-start;
     background-color: var(--nc-color-gray);
     border-radius: var(--nc-radius-md);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     padding: calc(var(--nc-card-padding) * 1.25) var(--nc-card-padding);
 
     @include desktop {
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
       padding: 3rem;
-    }
-  }
-
-  &-logo {
-    flex-shrink: 0;
-
-    img {
-      display: block;
-      height: 32px;
-      width: auto;
-    }
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: none;
     }
   }
 
@@ -855,8 +832,7 @@ section.section.hero[data-category="Home Assistant Cloud"] {
     @include desktop {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem 2.5rem;
-      justify-content: flex-end;
+      gap: 1rem 3rem;
     }
   }
 
