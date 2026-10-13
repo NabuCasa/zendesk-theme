@@ -5949,14 +5949,14 @@ hr {
   text-decoration-color: var(--nc-color-orange);
 }
 .user-nav-list .btn.btn-white {
-  background-color: var(--nc-color-charcoal);
-  color: var(--nc-color-white);
   padding: 0 1.5rem;
 }
+.user-nav-list .btn.btn-white, .user-nav-list .btn.btn-white:hover, .user-nav-list .btn.btn-white:focus, .user-nav-list .btn.btn-white:focus-visible, .user-nav-list .btn.btn-white:active {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
 .user-nav-list .btn.btn-white:hover, .user-nav-list .btn.btn-white:focus-visible {
-  background-color: var(--nc-color-sun);
-  color: var(--nc-color-charcoal);
-  box-shadow: var(--nc-ring-sun);
+  box-shadow: var(--nc-ring);
 }
 
 .nav-wrapper-desktop .user-info .dropdown-toggle,
@@ -6090,12 +6090,21 @@ hr {
   text-decoration: none;
   width: 100%;
 }
-.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark {
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus-visible, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:active {
+  background-color: var(--nc-color-charcoal);
   color: var(--nc-color-white);
+  text-decoration: none;
 }
-.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light {
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus-visible, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:active {
   background-color: var(--nc-color-white);
   color: var(--nc-color-charcoal);
+  text-decoration: none;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus-visible {
+  box-shadow: 0 0 0 1px var(--nc-color-white), 0 0 0 2px var(--nc-color-white), 0 0 0 3px var(--nc-color-white);
 }
 
 @keyframes nc-menu-in {
@@ -6383,24 +6392,58 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   border-top: 1px solid var(--nc-color-gray);
 }
 
-/***** Footer: rounded gray panel *****/
+/***** Footer: grey panel and copyright line, like the nabucasa.com footer *****/
 .footer {
-  background-color: var(--nc-color-gray);
+  background: none;
   border: 0;
-  border-radius: var(--nc-radius-md);
-  margin: calc(var(--nc-section-gap) * 1.5) auto var(--nc-gutter);
+  margin: calc(var(--nc-section-gap) * 1.5) auto 0;
   max-width: calc(1400px - var(--nc-gutter) * 2);
-  padding: var(--nc-card-padding) 0;
+  padding: 0;
   width: calc(100% - var(--nc-gutter) * 2);
 }
 .footer a, .footer-language-selector button {
   color: var(--nc-color-charcoal);
+  text-decoration: none;
 }
-.footer-inner {
+.footer a:hover, .footer a:focus-visible, .footer-language-selector button:hover, .footer-language-selector button:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-orange);
+}
+.footer-panel {
+  background-color: var(--nc-color-gray);
+  border-radius: var(--nc-radius-md);
+  padding: calc(var(--nc-card-padding) * 1.5) var(--nc-card-padding);
+}
+.footer-links ul {
+  display: grid;
+  gap: 1rem var(--nc-section-gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 30rem) {
+  .footer-links ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .footer-links ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.footer-links a {
+  font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.footer-bottom {
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  font-size: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
   gap: 1rem;
-  padding: 0 var(--nc-card-padding);
+  justify-content: space-between;
+  padding: 1rem var(--nc-card-padding) var(--nc-gutter);
 }
 
 /***** Search results page *****/
@@ -6747,8 +6790,21 @@ main > .container > h2,
 
 @container (min-width: 46rem) {
   .category-cards {
-    grid-auto-rows: minmax(clamp(30rem, 40vw, 36rem), auto);
+    grid-auto-rows: minmax(clamp(18rem, 26vw, 25rem), auto) auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .category-cards > .category-card {
+    display: grid;
+    grid-row: span 2;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+  .category-cards > .category-card::before {
+    grid-row: 1;
+  }
+  .category-cards .category-card-content {
+    grid-row: 2;
   }
   .category-cards > .category-card[data-name="Home Assistant Cloud"] {
     grid-column: span 2;

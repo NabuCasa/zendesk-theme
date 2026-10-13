@@ -44,8 +44,27 @@ $home-sidebar-width: 1280px;
 // Roughly the 6:7 proportions of the nabucasa.com image cards
 @container (min-width: 46rem) {
   .category-cards {
-    grid-auto-rows: minmax(clamp(30rem, 40vw, 36rem), auto);
+    // Rows come in pairs: a photo row, then a row for the title and description
+    // boxes. Each card spans one pair as a subgrid, so cards side by side share
+    // the box row and their boxes are always the same height (as on nabucasa.com).
+    grid-auto-rows: minmax(clamp(18rem, 26vw, 25rem), auto) auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    > .category-card {
+      display: grid;
+      grid-row: span 2;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: subgrid;
+      row-gap: 0;
+
+      &::before {
+        grid-row: 1;
+      }
+    }
+
+    .category-card-content {
+      grid-row: 2;
+    }
 
     // Cloud leads as a double-width card, as the first card does on nabucasa.com
     > .category-card[data-name="Home Assistant Cloud"] {

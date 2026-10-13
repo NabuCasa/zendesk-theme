@@ -234,16 +234,22 @@ hr {
     text-decoration-color: var(--nc-color-orange);
   }
 
+  // "Submit a ticket": keeps its colour on hover and grows a ring
   .btn.btn-white {
-    background-color: var(--nc-color-charcoal);
-    color: var(--nc-color-white);
     padding: 0 1.5rem;
+
+    &,
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      background-color: var(--nc-color-charcoal);
+      color: var(--nc-color-white);
+    }
 
     &:hover,
     &:focus-visible {
-      background-color: var(--nc-color-sun);
-      color: var(--nc-color-charcoal);
-      box-shadow: var(--nc-ring-sun);
+      box-shadow: var(--nc-ring);
     }
   }
 }
@@ -404,13 +410,39 @@ hr {
         width: 100%;
       }
 
+      // Keep their colours on hover and grow a ring instead, like the other buttons
       .btn-dark {
-        color: var(--nc-color-white);
+        &,
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active {
+          background-color: var(--nc-color-charcoal);
+          color: var(--nc-color-white);
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:focus-visible {
+          box-shadow: var(--nc-ring);
+        }
       }
 
       .btn-light {
-        background-color: var(--nc-color-white);
-        color: var(--nc-color-charcoal);
+        &,
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &:active {
+          background-color: var(--nc-color-white);
+          color: var(--nc-color-charcoal);
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:focus-visible {
+          box-shadow: 0 0 0 1px var(--nc-color-white), 0 0 0 2px var(--nc-color-white), 0 0 0 3px var(--nc-color-white);
+        }
       }
     }
   }
@@ -757,26 +789,63 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   border-top: 1px solid var(--nc-color-gray);
 }
 
-/***** Footer: rounded gray panel *****/
+/***** Footer: grey panel and copyright line, like the nabucasa.com footer *****/
 .footer {
-  background-color: var(--nc-color-gray);
+  background: none;
   border: 0;
-  border-radius: var(--nc-radius-md);
-  margin: calc(var(--nc-section-gap) * 1.5) auto var(--nc-gutter);
+  margin: calc(var(--nc-section-gap) * 1.5) auto 0;
   max-width: calc(#{$max-width-container} - var(--nc-gutter) * 2);
-  padding: var(--nc-card-padding) 0;
+  padding: 0;
   width: calc(100% - var(--nc-gutter) * 2);
 
   a,
   &-language-selector button {
     color: var(--nc-color-charcoal);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+      text-decoration-color: var(--nc-color-orange);
+    }
   }
 
-  &-inner {
+  &-panel {
+    background-color: var(--nc-color-gray);
+    border-radius: var(--nc-radius-md);
+    padding: calc(var(--nc-card-padding) * 1.5) var(--nc-card-padding);
+  }
+
+  &-links ul {
+    display: grid;
+    gap: 1rem var(--nc-section-gap);
+    grid-template-columns: minmax(0, 1fr);
+
+    @media (min-width: 30rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  &-links a {
+    font-size: clamp(1.125rem, calc(1.0179rem + 0.5357vw), 1.5rem);
+    font-weight: 450;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  &-bottom {
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    font-size: clamp(0.75rem, calc(0.6964rem + 0.2679vw), 0.9375rem);
     gap: 1rem;
-    padding: 0 var(--nc-card-padding);
+    justify-content: space-between;
+    padding: 1rem var(--nc-card-padding) var(--nc-gutter);
   }
 }
 
