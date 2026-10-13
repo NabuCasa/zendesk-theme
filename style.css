@@ -6722,13 +6722,14 @@ main > .container > h2,
     grid-auto-rows: minmax(clamp(26rem, 34vw, 32rem), auto);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .category-cards:has(> .category-card:last-child:nth-child(odd)) > .category-card:first-child {
+  .category-cards > .category-card[data-name="Home Assistant Cloud"] {
     grid-column: span 2;
   }
 }
 
 .category-card {
   --card-title-color: var(--nc-color-white);
+  order: 100;
   background-color: var(--nc-color-gray);
   background-position: center 30%;
   background-repeat: no-repeat;
@@ -6754,31 +6755,38 @@ main > .container > h2,
 }
 .category-card[data-name="Home Assistant Cloud"] {
   --card-title-color: var(--nc-color-gray);
+  order: 1;
   background-image: url($assets-category-cloud-webp);
 }
 .category-card[data-name="Home Assistant Green"] {
   --card-title-color: var(--nc-color-green);
+  order: 2;
   background-image: url($assets-category-green-webp);
-}
-.category-card[data-name="Home Assistant Yellow"] {
-  --card-title-color: var(--nc-color-sun);
-  background-image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg");
-}
-.category-card[data-name="Home Assistant Voice Preview Edition"] {
-  --card-title-color: var(--nc-color-orange);
-  background-image: url($assets-category-voice-preview-edition-webp);
-}
-.category-card[data-name="Home Assistant Connect ZBT-1"] {
-  --card-title-color: var(--nc-color-tin);
-  background-image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg");
 }
 .category-card[data-name="Home Assistant Connect ZBT-2"] {
   --card-title-color: var(--nc-color-tin);
+  order: 3;
   background-image: url($assets-category-connect-zbt-2-webp);
 }
 .category-card[data-name="Home Assistant Connect ZWA-2"] {
   --card-title-color: var(--nc-color-tin);
+  order: 4;
   background-image: url($assets-category-connect-zwa-2-webp);
+}
+.category-card[data-name="Home Assistant Voice Preview Edition"] {
+  --card-title-color: var(--nc-color-orange);
+  order: 5;
+  background-image: url($assets-category-voice-preview-edition-webp);
+}
+.category-card[data-name="Home Assistant Connect ZBT-1"] {
+  --card-title-color: var(--nc-color-tin);
+  order: 6;
+  background-image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg");
+}
+.category-card[data-name="Home Assistant Yellow"] {
+  --card-title-color: var(--nc-color-sun);
+  order: 7;
+  background-image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg");
 }
 .category-card-content {
   display: grid;

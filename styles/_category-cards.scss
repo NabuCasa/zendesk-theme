@@ -3,16 +3,17 @@
 // a photo of the device fills the card, with a coloured title box and a white
 // description box sitting on top of it at the bottom.
 
-// Photo and title colour for each category, keyed by category name. Categories
-// without an entry fall back to the gray card with no photo.
+// Photo and title colour for each category, keyed by category name and listed
+// in the order the cards appear on the home page (whatever order Zendesk returns
+// them in). Categories without an entry come last, as plain gray cards.
 $category-cards: (
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray)),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Yellow": (image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg"), color: var(--nc-color-sun)),
-  "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
-  "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
   "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin)),
   "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin)),
+  "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
+  "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
+  "Yellow": (image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg"), color: var(--nc-color-sun)),
 );
 
 .category-cards {
@@ -25,8 +26,8 @@ $category-cards: (
     grid-auto-rows: minmax(clamp(26rem, 34vw, 32rem), auto);
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    // With an odd number of cards the first one spans both columns, as on nabucasa.com
-    &:has(> .category-card:last-child:nth-child(odd)) > .category-card:first-child {
+    // Cloud leads as a double-width card, as the first card does on nabucasa.com
+    > .category-card[data-name="Home Assistant Cloud"] {
       grid-column: span 2;
     }
   }
@@ -34,6 +35,7 @@ $category-cards: (
 
 .category-card {
   --card-title-color: var(--nc-color-white);
+  order: 100;
 
   background-color: var(--nc-color-gray);
   background-position: center 30%;
@@ -62,6 +64,7 @@ $category-cards: (
   @each $name, $card in $category-cards {
     &[data-name="Home Assistant #{$name}"] {
       --card-title-color: #{map-get($card, color)};
+      order: index($category-cards, ($name $card));
       background-image: map-get($card, image);
     }
   }
