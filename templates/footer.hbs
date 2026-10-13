@@ -1,5 +1,8 @@
 <footer class="footer">
   <section class="footer-panel">
+    {{#link 'help_center' class='footer-logo'}}
+      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" height="32" />
+    {{/link}}
     <nav class="footer-links" aria-label="Nabu Casa">
       <ul>
         <li>{{#link 'help_center'}}Support{{/link}}</li>

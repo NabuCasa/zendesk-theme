@@ -6410,9 +6410,32 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   text-decoration-color: var(--nc-color-orange);
 }
 .footer-panel {
+  align-items: flex-start;
   background-color: var(--nc-color-gray);
   border-radius: var(--nc-radius-md);
-  padding: calc(var(--nc-card-padding) * 1.5) var(--nc-card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: calc(var(--nc-card-padding) * 1.25) var(--nc-card-padding);
+}
+@media (min-width: 1024px) {
+  .footer-panel {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+}
+.footer-logo {
+  flex-shrink: 0;
+}
+.footer-logo img {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+.footer-logo:hover, .footer-logo:focus-visible {
+  text-decoration: none;
 }
 .footer-links ul {
   display: grid;
@@ -6421,16 +6444,19 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
 }
 @media (min-width: 30rem) {
   .footer-links ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, max-content);
   }
 }
 @media (min-width: 1024px) {
   .footer-links ul {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2.5rem;
+    justify-content: flex-end;
   }
 }
 .footer-links a {
-  font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+  font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.375rem);
   font-weight: 450;
   letter-spacing: -0.01em;
   line-height: 1.1;
@@ -6444,6 +6470,12 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   gap: 1rem;
   justify-content: space-between;
   padding: 1rem var(--nc-card-padding) var(--nc-gutter);
+}
+@media (min-width: 1024px) {
+  .footer-bottom {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /***** Search results page *****/
