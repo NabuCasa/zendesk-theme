@@ -938,7 +938,12 @@ main > .container > h2,
   margin-top: var(--nc-section-gap);
 }
 
-.sub-nav {
+// Search results page: breadcrumbs and search sit directly in the container
+.container > .sub-nav {
   margin-bottom: 0;
-  padding-top: var(--nc-section-gap);
+  padding-top: var(--nc-gutter);
+}
+
+.container-divider {
+  display: none;
 }
