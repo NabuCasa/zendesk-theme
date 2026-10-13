@@ -764,7 +764,7 @@
 
         setActive(links, active || headings[0]);
       },
-      { rootMargin: "-90px 0px -55% 0px" }
+      { rootMargin: "0px 0px -55% 0px" }
     );
 
     headings.forEach((heading) => observer.observe(heading));

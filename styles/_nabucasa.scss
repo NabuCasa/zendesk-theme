@@ -183,34 +183,19 @@ hr {
   }
 }
 
-/***** Header: floating pill, like the nabucasa.com navigation *****/
+/***** Header: full-width bar, square edges *****/
 .header {
-  background-color: transparent;
-  height: auto;
-  padding: var(--nc-space-sm) 0 0;
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  background-color: var(--nc-color-gray);
+  height: $header-height;
 
   a {
     color: var(--nc-color-charcoal);
   }
-
-  .container {
-    max-width: $max-width-container;
-  }
-
-  &-inner {
-    background-color: var(--nc-color-gray);
-    border-radius: 100px;
-    min-height: var(--nc-navigation-height);
-    padding: 0 var(--nc-space-xs) 0 var(--nc-space-sm);
-  }
 }
 
 .logo img {
-  height: 32px;
-  max-height: 32px;
+  height: 36px;
+  max-height: 36px;
   width: auto;
 }
 
@@ -270,11 +255,7 @@ hr {
   .menu-list-mobile {
     background-color: var(--nc-color-sun);
     border: 0;
-    border-radius: var(--nc-radius-md);
     box-shadow: none;
-    left: 1rem;
-    right: 1rem;
-    top: calc(100% + 0.5rem);
     padding: 0.5rem 0;
   }
 

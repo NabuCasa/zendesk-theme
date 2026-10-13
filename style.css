@@ -5906,31 +5906,18 @@ hr {
   box-shadow: var(--nc-ring);
 }
 
-/***** Header: floating pill, like the nabucasa.com navigation *****/
+/***** Header: full-width bar, square edges *****/
 .header {
-  background-color: transparent;
-  height: auto;
-  padding: var(--nc-space-sm) 0 0;
-  position: sticky;
-  top: 0;
-  z-index: 20;
+  background-color: var(--nc-color-gray);
+  height: 74px;
 }
 .header a {
   color: var(--nc-color-charcoal);
 }
-.header .container {
-  max-width: 1400px;
-}
-.header-inner {
-  background-color: var(--nc-color-gray);
-  border-radius: 100px;
-  min-height: var(--nc-navigation-height);
-  padding: 0 var(--nc-space-xs) 0 var(--nc-space-sm);
-}
 
 .logo img {
-  height: 32px;
-  max-height: 32px;
+  height: 36px;
+  max-height: 36px;
   width: auto;
 }
 
@@ -5980,11 +5967,7 @@ hr {
 .nav-wrapper-mobile .menu-list-mobile {
   background-color: var(--nc-color-sun);
   border: 0;
-  border-radius: var(--nc-radius-md);
   box-shadow: none;
-  left: 1rem;
-  right: 1rem;
-  top: calc(100% + 0.5rem);
   padding: 0.5rem 0;
 }
 .nav-wrapper-mobile .menu-list-mobile-items a {
@@ -6374,8 +6357,8 @@ section.section.hero::after {
   .article-toc {
     margin-bottom: 0;
     position: sticky;
-    top: calc(var(--nc-navigation-height) + var(--nc-space-sm) + 1.5rem);
-    max-height: calc(100vh - var(--nc-navigation-height) - var(--nc-space-sm) - 3rem);
+    top: 1.5rem;
+    max-height: calc(100vh - 3rem);
     overflow-y: auto;
     overscroll-behavior: contain;
   }
@@ -6420,5 +6403,5 @@ section.section.hero::after {
 }
 .article-body h2,
 .article-body h3 {
-  scroll-margin-top: calc(var(--nc-navigation-height) + var(--nc-space-sm) + 1.5rem);
+  scroll-margin-top: 1.5rem;
 }

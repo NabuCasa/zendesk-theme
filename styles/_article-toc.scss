@@ -126,8 +126,8 @@ $toc-desktop-width: 1200px;
   @media (min-width: $toc-desktop-width) {
     margin-bottom: 0;
     position: sticky;
-    top: calc(var(--nc-navigation-height) + var(--nc-space-sm) + 1.5rem);
-    max-height: calc(100vh - var(--nc-navigation-height) - var(--nc-space-sm) - 3rem);
+    top: 1.5rem;
+    max-height: calc(100vh - 3rem);
     overflow-y: auto;
     overscroll-behavior: contain;
 
@@ -180,10 +180,10 @@ $toc-desktop-width: 1200px;
   }
 }
 
-// Leave room for the sticky header when jumping to a heading
+// Leave a little breathing room above a heading when jumping to it
 .article-body {
   h2,
   h3 {
-    scroll-margin-top: calc(var(--nc-navigation-height) + var(--nc-space-sm) + 1.5rem);
+    scroll-margin-top: 1.5rem;
   }
 }
