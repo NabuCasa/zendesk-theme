@@ -20,14 +20,28 @@
   --nc-color-highlight: #c05811;
 
   --nc-radius-md: 1rem;
+
+  // Spacing scale, used everywhere so gaps stay consistent:
+  // gutter = page edge, section = between page blocks, stack = between cards,
+  // card = inside cards and panels.
+  --nc-gutter: 1.25rem;
+  --nc-section-gap: 2rem;
+  --nc-stack-gap: 1rem;
+  --nc-card-padding: 1.5rem;
   --nc-navigation-height: 48px;
 
-  --nc-space-xs: clamp(0.5rem, calc(0.3571rem + 0.7143vw), 1rem);
-  --nc-space-sm: clamp(1rem, calc(0.7143rem + 1.4286vw), 2rem);
-  --nc-space-md: clamp(1.5rem, calc(1.0714rem + 2.1429vw), 3rem);
 
   --nc-ring: 0 0 0 1px var(--nc-color-charcoal), 0 0 0 2px var(--nc-color-charcoal), 0 0 0 3px var(--nc-color-charcoal);
   --nc-ring-sun: 0 0 0 1px var(--nc-color-sun), 0 0 0 2px var(--nc-color-sun), 0 0 0 3px var(--nc-color-sun);
+}
+
+@include tablet {
+  :root {
+    --nc-gutter: 2rem;
+    --nc-section-gap: 3rem;
+    --nc-stack-gap: 1.25rem;
+    --nc-card-padding: 2rem;
+  }
 }
 
 @include desktop {
@@ -187,6 +201,9 @@ hr {
 .header {
   background-color: var(--nc-color-gray);
   height: $header-height;
+  position: relative;
+  transition: background-color 200ms ease-out;
+  z-index: 20;
 
   a {
     color: var(--nc-color-charcoal);
@@ -200,7 +217,7 @@ hr {
 }
 
 .user-nav-list {
-  gap: var(--nc-space-sm);
+  gap: 2rem;
 
   .btn {
     font-size: clamp(0.75rem, calc(0.6964rem + 0.2679vw), 0.9375rem);
@@ -220,7 +237,7 @@ hr {
   .btn.btn-white {
     background-color: var(--nc-color-charcoal);
     color: var(--nc-color-white);
-    padding: 0 var(--nc-space-sm);
+    padding: 0 1.5rem;
 
     &:hover,
     &:focus-visible {
@@ -236,19 +253,58 @@ hr {
   color: var(--nc-color-charcoal);
 }
 
-.nav-wrapper-mobile {
-  .menu-button-mobile {
-    color: var(--nc-color-charcoal);
-    min-height: var(--nc-navigation-height);
-
-    .icon-menu {
-      width: 36px;
-      height: 36px;
+/***** Mobile menu: full-screen sun panel, like the nabucasa.com mobile navigation *****/
+@media (max-width: #{$desktop-width - 1px}) {
+  html.mobile-menu-open {
+    &,
+    body {
+      overflow: hidden;
     }
 
-    &[aria-expanded="true"] .icon-menu {
-      color: var(--nc-color-charcoal);
-      background: var(--nc-color-sun);
+    .header {
+      background-color: var(--nc-color-sun);
+    }
+  }
+}
+
+.nav-wrapper-mobile {
+  .menu-button-mobile {
+    align-items: center;
+    border-radius: 100px;
+    color: var(--nc-color-charcoal);
+    gap: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    justify-content: center;
+    padding: 0 0.25rem;
+
+    .user-avatar {
+      height: 32px;
+      width: 32px;
+    }
+
+    .icon-menu,
+    .icon-close {
+      border-radius: 50%;
+      height: 40px;
+      padding: 11px;
+      width: 40px;
+    }
+
+    .icon-close {
+      display: none;
+    }
+
+    &[aria-expanded="true"] {
+      .icon-menu {
+        display: none;
+      }
+
+      .icon-close {
+        background-color: var(--nc-color-charcoal);
+        color: var(--nc-color-white);
+        display: block;
+      }
     }
   }
 
@@ -256,26 +312,114 @@ hr {
     background-color: var(--nc-color-sun);
     border: 0;
     box-shadow: none;
-    padding: 0.5rem 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(100vh - #{$header-height});
+    height: calc(100dvh - #{$header-height});
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.5rem var(--nc-gutter) var(--nc-section-gap);
+
+    &[aria-expanded="true"] {
+      animation: nc-menu-in 220ms ease-out;
+    }
   }
 
   .menu-list-mobile-items {
-    a {
+    .item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    .nav-divider {
+      display: none;
+    }
+
+    a,
+    button {
+      align-items: center;
       color: var(--nc-color-charcoal);
-      font-size: 1.125rem;
+      display: flex;
+      font-size: 1.375rem;
       font-weight: 450;
+      gap: 0.75rem;
+      justify-content: space-between;
+      letter-spacing: -0.01em;
+      padding: 1.125rem 0;
 
       &:active,
       &:focus,
       &:hover {
         background-color: transparent;
         text-decoration: underline;
+        text-decoration-color: var(--nc-color-charcoal);
+      }
+
+      &.external-link::after {
+        display: inline-block;
+        flex-shrink: 0;
+        height: 1.25rem;
+        width: 1.25rem;
       }
     }
 
-    .nav-divider {
-      border-bottom: 1px solid var(--nc-color-white);
+    .my-profile {
+      justify-content: flex-start;
+      line-height: 1.2;
+
+      .my-profile-tooltip {
+        color: var(--nc-color-charcoal);
+        font-family: var(--nc-font-serif);
+        font-size: 1rem;
+        font-weight: 300;
+        margin-top: 0.25rem;
+      }
     }
+
+    .menu-profile-avatar {
+      height: 48px;
+      margin: 0;
+      width: 48px;
+    }
+
+    .item-actions {
+      border-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-top: var(--nc-section-gap);
+
+      .btn {
+        font-size: 1.125rem;
+        height: 54px;
+        justify-content: center;
+        padding: 0 1.5rem;
+        text-decoration: none;
+        width: 100%;
+      }
+
+      .btn-dark {
+        color: var(--nc-color-white);
+      }
+
+      .btn-light {
+        background-color: var(--nc-color-white);
+        color: var(--nc-color-charcoal);
+      }
+    }
+  }
+}
+
+@keyframes nc-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -307,19 +451,23 @@ hr {
   background-color: var(--nc-color-gray);
   background-image: none;
   border-radius: var(--nc-radius-md);
-  margin: var(--nc-space-sm) auto 0;
-  max-width: calc(#{$max-width-container} - 2rem);
+  margin: var(--nc-gutter) auto var(--nc-section-gap) !important;
+  max-width: calc(#{$max-width-container} - var(--nc-gutter) * 2);
   overflow: hidden;
-  padding: var(--nc-space-md) 0;
+  padding: 2.5rem 0;
   text-align: left;
-  width: calc(100% - 2rem);
+  width: calc(100% - var(--nc-gutter) * 2);
 
   @include tablet {
     padding: clamp(3rem, 6vw, 6rem) 0;
   }
 
   .container {
-    padding: 0 var(--nc-space-md);
+    padding: 0 var(--nc-card-padding);
+
+    @include desktop {
+      padding: 0 3rem;
+    }
   }
 
   &-inner {
@@ -341,19 +489,17 @@ hr {
   }
 
   .search-wrapper {
-    margin: var(--nc-space-md) 0 0;
+    margin: 2rem 0 0;
     max-width: 760px;
 
     @include tablet {
-      margin-top: var(--nc-space-md);
+      margin-top: 2.5rem;
     }
   }
 }
 
 // Product heroes keep their photography, with a charcoal scrim instead of blue
 section.section.hero {
-  margin-bottom: var(--nc-space-sm);
-
   &::after {
     background-color: rgba(31, 31, 28, 0.45) !important;
   }
@@ -371,6 +517,8 @@ section.section.hero {
 
   input[type="search"] {
     font-weight: 300;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
 
     &::placeholder {
       color: var(--nc-color-taupe);
@@ -395,7 +543,12 @@ section.section.hero {
 }
 
 .sub-hero {
-  margin: var(--nc-space-xs) 0 var(--nc-space-sm);
+  gap: 1rem var(--nc-section-gap);
+  margin: 0 0 var(--nc-section-gap);
+
+  .breadcrumbs {
+    padding: 0;
+  }
 
   .search-wrapper {
     margin: 0;
@@ -580,10 +733,10 @@ section.section.hero {
   background-color: var(--nc-color-gray);
   border: 0;
   border-radius: var(--nc-radius-md);
-  margin: var(--nc-space-md) auto 1rem;
-  max-width: calc(#{$max-width-container} - 2rem);
-  padding: var(--nc-space-sm) 0;
-  width: calc(100% - 2rem);
+  margin: calc(var(--nc-section-gap) * 1.5) auto var(--nc-gutter);
+  max-width: calc(#{$max-width-container} - var(--nc-gutter) * 2);
+  padding: var(--nc-card-padding) 0;
+  width: calc(100% - var(--nc-gutter) * 2);
 
   a,
   &-language-selector button {
@@ -594,12 +747,16 @@ section.section.hero {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 0 var(--nc-space-sm);
+    padding: 0 var(--nc-card-padding);
   }
 }
 
 /***** Search results page *****/
 .sub-nav .search-container {
+  @include mobile {
+    max-width: none;
+  }
+
   .search input[type="search"],
   .search .clear-button {
     background-color: var(--nc-color-gray);
@@ -670,4 +827,118 @@ section.section.hero {
     font-style: normal;
     padding: 0 0.15em;
   }
+}
+
+/***** Consistent spacing *****/
+.container,
+.footer-inner {
+  padding-left: var(--nc-gutter);
+  padding-right: var(--nc-gutter);
+}
+
+.hero .container {
+  padding-left: var(--nc-card-padding);
+  padding-right: var(--nc-card-padding);
+
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.layout {
+  gap: var(--nc-stack-gap) var(--nc-section-gap);
+}
+
+// Stacked columns on small screens get a full section gap before the sidebar
+@include mobile {
+  .layout > .column.sidebar {
+    margin-top: calc(var(--nc-section-gap) - var(--nc-stack-gap));
+  }
+}
+
+.item-cards {
+  gap: var(--nc-stack-gap);
+
+  .item-card {
+    padding: var(--nc-card-padding);
+
+    &.small {
+      padding: 1.25rem var(--nc-card-padding);
+    }
+
+    &.product {
+      padding: 1.25rem;
+    }
+  }
+}
+
+// Page-level headings ("Choose a category", section names)
+main > .container > h2,
+.page-header {
+  margin: 0 0 1.25rem;
+}
+
+.page-header h2,
+.page-header .h2 {
+  margin-bottom: 0.5rem;
+}
+
+.page-header-description {
+  margin: 0 0 0.5rem;
+}
+
+.article-header {
+  margin-bottom: var(--nc-section-gap);
+}
+
+.article-author {
+  margin: 0.75rem 0 0;
+}
+
+.article-toc {
+  margin-bottom: var(--nc-section-gap);
+}
+
+.article-relatives {
+  margin-top: var(--nc-section-gap);
+  padding: var(--nc-section-gap) 0 0;
+}
+
+// Search field and button stay on one line on phones
+.search-wrapper {
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+
+  form {
+    margin-bottom: 0;
+    min-width: 0;
+  }
+
+  form + button {
+    flex-shrink: 0;
+    margin-left: 0;
+    order: 0;
+  }
+
+  @include mobile {
+    input,
+    form + button {
+      height: 48px;
+    }
+
+    form + button {
+      padding: 0 1.25rem;
+    }
+  }
+}
+
+.search-results {
+  gap: var(--nc-section-gap);
+  margin-top: var(--nc-section-gap);
+}
+
+.sub-nav {
+  margin-bottom: 0;
+  padding-top: var(--nc-section-gap);
 }

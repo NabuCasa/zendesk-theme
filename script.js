@@ -11,6 +11,10 @@
     toggle.setAttribute("aria-expanded", !isExpanded);
   }
 
+  function setMobileMenuOpen(open) {
+    document.documentElement.classList.toggle("mobile-menu-open", open);
+  }
+
   function closeNavigation(toggle, menu) {
     menu.setAttribute("aria-expanded", false);
     toggle.setAttribute("aria-expanded", false);
@@ -26,12 +30,25 @@
     menuButton.addEventListener("click", (event) => {
       event.stopPropagation();
       toggleNavigation(menuButton, menuList);
+      setMobileMenuOpen(menuList.getAttribute("aria-expanded") === "true");
     });
 
     menuList.addEventListener("keyup", (event) => {
       if (event.keyCode === ESCAPE) {
         event.stopPropagation();
         closeNavigation(menuButton, menuList);
+        setMobileMenuOpen(false);
+      }
+    });
+
+    // Close the mobile menu when tapping the backdrop below it
+    document.addEventListener("click", (event) => {
+      if (
+        menuList.getAttribute("aria-expanded") === "true" &&
+        !menuList.contains(event.target)
+      ) {
+        closeNavigation(menuButton, menuList);
+        setMobileMenuOpen(false);
       }
     });
 
