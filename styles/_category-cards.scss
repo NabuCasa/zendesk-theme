@@ -7,16 +7,16 @@
 // in the order the cards appear on the home page (whatever order Zendesk returns
 // them in). Categories without an entry come last, as plain gray cards.
 //
-// Tall devices set `floor`: their photo (cropped just below the device and
-// widened with its own backdrop) stops above the boxes so the whole device stays
+// Tall devices set `floor`: their photo (a wide crop from just above the device
+// to just below its base) stops above the boxes so the whole device stays
 // visible, and the space behind the boxes gets a gradient matching the photo's
 // bottom edge.
 $category-cards: (
   // The phone sits right of centre in this photo; keep it in view on narrow cards
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#cdb7a1, #89755c)),
-  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c1ae99, #716049)),
+  "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#beac9e, #897764)),
+  "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#ad9b8e, #625546)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
   "Connect ZBT-1": (image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg"), color: var(--nc-color-tin)),
   "Yellow": (image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg"), color: var(--nc-color-sun)),
@@ -37,7 +37,9 @@ $home-sidebar-width: 1280px;
   grid-template-columns: minmax(0, 1fr);
 
   // Single wide cards would crop the device photos too much, so cap their width
+  // and give them a little more height (the tall ZWA-2 needs it)
   @include tablet {
+    grid-auto-rows: minmax(32rem, auto);
     grid-template-columns: minmax(0, 40rem);
   }
 }
@@ -111,8 +113,8 @@ $home-sidebar-width: 1280px;
         $floor: map-get($card, floor);
         background-image: linear-gradient(90deg, nth($floor, 1), nth($floor, 2));
 
-        // The photo is pre-widened with its plain backdrop, so at any card width
-        // it can be scaled to its full height and the whole device stays in view
+        // The photo is a wide crop with plain backdrop either side, so at any card
+        // width it can be scaled to its full height and the whole device stays in view
         &::before {
           background: map-get($card, image) center bottom / cover no-repeat;
           content: "";

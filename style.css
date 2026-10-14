@@ -6974,6 +6974,7 @@ main > .container > h2,
 }
 @media (min-width: 768px) {
   .category-cards {
+    grid-auto-rows: minmax(32rem, auto);
     grid-template-columns: minmax(0, 40rem);
   }
 }
@@ -7040,7 +7041,7 @@ main > .container > h2,
 .category-card[data-name="Home Assistant Connect ZBT-2"] {
   --card-title-color: var(--nc-color-tin);
   order: 3;
-  background-image: linear-gradient(90deg, #cdb7a1, #89755c);
+  background-image: linear-gradient(90deg, #beac9e, #897764);
 }
 .category-card[data-name="Home Assistant Connect ZBT-2"]::before {
   background: url($assets-category-connect-zbt-2-webp) center bottom/cover no-repeat;
@@ -7056,7 +7057,7 @@ main > .container > h2,
 .category-card[data-name="Home Assistant Connect ZWA-2"] {
   --card-title-color: var(--nc-color-tin);
   order: 4;
-  background-image: linear-gradient(90deg, #c1ae99, #716049);
+  background-image: linear-gradient(90deg, #ad9b8e, #625546);
 }
 .category-card[data-name="Home Assistant Connect ZWA-2"]::before {
   background: url($assets-category-connect-zwa-2-webp) center bottom/cover no-repeat;
