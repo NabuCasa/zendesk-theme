@@ -6630,6 +6630,183 @@ main > .container > h2,
   display: none;
 }
 
+/***** User profile page *****/
+.profile-header {
+  background-color: var(--nc-color-gray);
+  border-radius: var(--nc-radius-md);
+  margin: var(--nc-gutter) auto var(--nc-section-gap);
+  max-width: calc(1400px - var(--nc-gutter) * 2);
+  padding: var(--nc-card-padding) 0;
+  width: calc(100% - var(--nc-gutter) * 2);
+}
+.profile-header .container {
+  padding-left: var(--nc-card-padding);
+  padding-right: var(--nc-card-padding);
+}
+.profile-header .basic-info .name {
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.1;
+}
+.profile-header .basic-info .name a {
+  color: inherit;
+}
+.profile-header .basic-info {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.profile-header .options {
+  align-items: center;
+  flex-basis: 100%;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .profile-header .options {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .profile-header .options {
+    flex-basis: auto;
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+}
+.profile-header .options > *,
+.profile-header .options > :not(:last-child) {
+  flex: 0 0 auto;
+  margin: 0;
+  width: auto;
+}
+.profile-header .profile-stats-activity {
+  border-top-color: var(--nc-color-white);
+}
+.profile-header .profile-stats-counters {
+  border-bottom-color: var(--nc-color-white);
+}
+.profile-header .stat-label {
+  color: var(--nc-color-taupe);
+}
+
+.profile-avatar {
+  margin-right: 1rem;
+}
+.profile-avatar .user-avatar {
+  border-radius: 50%;
+}
+
+.profile-private-badge {
+  align-items: center;
+  background-color: var(--nc-color-white);
+  border: 0;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+  display: inline-flex;
+  font-size: 0.875rem;
+  gap: 0.4rem;
+  height: 36px;
+  padding: 0 1rem;
+}
+.profile-private-badge .profile-private-icon {
+  line-height: 1;
+  margin: 0;
+}
+
+.split-button button {
+  border-radius: 100px;
+  font-size: 0.875rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1.25rem;
+  transition: box-shadow 220ms ease-out;
+  width: auto;
+}
+.split-button button, .split-button button:hover, .split-button button:focus, .split-button button:focus-visible, .split-button button:active {
+  background-color: var(--nc-color-charcoal);
+  border: 0;
+  color: var(--nc-color-white);
+}
+.split-button button:hover, .split-button button:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+
+[dir=ltr] .split-button button:not(:only-child):first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px 0 0 100px;
+}
+[dir=rtl] .split-button button:not(:only-child):first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0 100px 100px 0;
+}
+.split-button button:not(:only-child):last-child {
+  max-width: 40px;
+  min-width: 40px;
+  padding: 0;
+  width: 40px;
+}
+[dir=ltr] .split-button button:not(:only-child):last-child {
+  border-radius: 0 100px 100px 0;
+}
+[dir=rtl] .split-button button:not(:only-child):last-child {
+  border-radius: 100px 0 0 100px;
+}
+
+.community-follow button {
+  border-radius: 100px;
+  font-size: 0.875rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1rem;
+  transition: box-shadow 220ms ease-out;
+}
+.community-follow button, .community-follow button:hover, .community-follow button:focus, .community-follow button:active {
+  background-color: var(--nc-color-white);
+  border: 0;
+  color: var(--nc-color-charcoal);
+}
+.community-follow button:hover, .community-follow button:focus-visible {
+  box-shadow: 0 0 0 1px var(--nc-color-white), 0 0 0 2px var(--nc-color-white), 0 0 0 3px var(--nc-color-white);
+}
+.community-follow button::after {
+  border-left-color: var(--nc-color-gray);
+  color: var(--nc-color-taupe);
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  position: static;
+}
+.community-follow button[data-selected=true], .community-follow button[data-selected=true]:hover, .community-follow button[data-selected=true]:focus, .community-follow button[data-selected=true]:active {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.community-follow button[data-selected=true]:hover, .community-follow button[data-selected=true]:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+.community-follow button[data-selected=true]::after {
+  border-left-color: rgba(255, 255, 255, 0.4);
+  color: var(--nc-color-white);
+}
+
+.profile-nav {
+  background-color: transparent;
+  border-bottom: 1px solid var(--nc-color-gray);
+  margin-bottom: var(--nc-section-gap);
+}
+.profile-nav .collapsible-nav-list li.current,
+.profile-nav .collapsible-nav-list li[aria-selected=true] {
+  font-weight: 450;
+}
+
+.collapsible-nav-list li.current,
+.collapsible-nav-list li[aria-selected=true] {
+  display: block;
+}
+
+.collapsible-nav-toggle {
+  z-index: 1;
+}
+
 /***** Article table of contents *****/
 .article-toc {
   flex: 1 1 100%;
