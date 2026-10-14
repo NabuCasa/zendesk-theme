@@ -12,7 +12,8 @@
 // visible, and the space behind the boxes gets a gradient matching the photo's
 // bottom edge.
 $category-cards: (
-  "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray)),
+  // The phone sits right of centre in this photo; keep it in view on narrow cards
+  "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
   "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#cdb7a1, #89755c)),
   "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#c1ae99, #716049)),
@@ -124,6 +125,10 @@ $home-sidebar-width: 1280px;
         }
       } @else {
         background-image: map-get($card, image);
+
+        @if map-has-key($card, position) {
+          background-position: map-get($card, position);
+        }
       }
     }
   }
@@ -131,11 +136,13 @@ $home-sidebar-width: 1280px;
   &-content {
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    // On phones the description gets more of the width so it wraps onto fewer lines
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     position: relative;
 
     @include tablet {
       gap: 0.75rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -153,7 +160,7 @@ $home-sidebar-width: 1280px;
     background-color: var(--card-title-color);
 
     h3 {
-      font-size: clamp(1.25rem, calc(1rem + 0.9vw), 1.75rem);
+      font-size: clamp(1.125rem, calc(0.9rem + 0.9vw), 1.75rem);
       font-weight: 450;
       line-height: 1.1;
       margin: 0;
@@ -167,10 +174,15 @@ $home-sidebar-width: 1280px;
     gap: 1rem;
     justify-content: space-between;
 
+    // Smaller on phones so the narrow box doesn't grow too tall
     p {
-      font-size: 0.9375rem;
+      font-size: 0.8125rem;
       line-height: 1.35;
       margin: 0;
+
+      @include tablet {
+        font-size: 0.9375rem;
+      }
     }
   }
 

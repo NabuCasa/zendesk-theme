@@ -813,16 +813,16 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   &-panel {
     background-color: var(--nc-color-gray);
     border-radius: var(--nc-radius-md);
-    padding: calc(var(--nc-card-padding) * 1.25) var(--nc-card-padding);
+    padding: var(--nc-card-padding);
 
     @include desktop {
-      padding: 3rem;
+      padding: 2rem 3rem;
     }
   }
 
   &-links ul {
     display: grid;
-    gap: 1rem var(--nc-section-gap);
+    gap: 0.75rem var(--nc-section-gap);
     grid-template-columns: minmax(0, 1fr);
 
     @media (min-width: 30rem) {
@@ -833,16 +833,15 @@ section.section.hero[data-category="Home Assistant Cloud"] {
     @include desktop {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem 3rem;
+      gap: 0.75rem 2.5rem;
       justify-content: flex-end;
     }
   }
 
   &-links a {
-    font-size: clamp(1.125rem, calc(1.0179rem + 0.5357vw), 1.375rem);
-    font-weight: 450;
-    letter-spacing: -0.01em;
-    line-height: 1.1;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.2;
     white-space: nowrap;
   }
 
