@@ -1289,3 +1289,141 @@ main > .container > h2,
 .collapsible-nav-toggle {
   z-index: 1;
 }
+
+// Leave room for the magnifier icon where a search box has one
+// (requests page, search results page)
+.search:has(.search-icon) input[type="search"],
+.search-container input[type="search"] {
+  padding-left: 2.75rem !important;
+}
+
+/***** Requests page *****/
+.my-activities-header {
+  padding-top: var(--nc-section-gap);
+
+  h1 {
+    font-size: clamp(2.25rem, calc(1.8rem + 2.2vw), 3.5rem);
+    font-weight: 450;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.my-activities-sub-nav {
+  margin-bottom: var(--nc-section-gap);
+
+  .collapsible-nav-border {
+    border-color: var(--nc-color-gray);
+  }
+
+  .collapsible-nav-list li.current,
+  .collapsible-nav-list li[aria-selected="true"] {
+    font-weight: 450;
+  }
+}
+
+.requests-table-toolbar {
+  gap: 1rem;
+
+  // Search: grey pill with the magnifier inside
+  .search {
+    align-items: center;
+    position: relative;
+
+    .search-icon {
+      color: var(--nc-color-charcoal);
+      height: 16px;
+      left: 1rem;
+      width: 16px;
+
+      [dir="rtl"] & {
+        left: auto;
+        right: 1rem;
+      }
+    }
+
+    input[type="search"] {
+      background-color: var(--nc-color-gray);
+      border: 1px solid transparent;
+      border-radius: 100px;
+      font-size: 1rem;
+      height: 44px;
+
+      &:focus {
+        border-color: var(--nc-color-charcoal);
+      }
+    }
+  }
+
+  // Filters: small label above a grey pill dropdown
+  .request-filter-label {
+    color: var(--nc-color-taupe);
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0;
+  }
+
+  select {
+    background-color: var(--nc-color-gray);
+    background-position: right 1rem center;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    color: var(--nc-color-charcoal);
+    font-size: 1rem;
+    height: 44px;
+    max-height: none;
+    margin-bottom: 0;
+    min-width: 10rem;
+    padding: 0 2.5rem 0 1.25rem;
+
+    &:focus {
+      border-color: var(--nc-color-charcoal);
+    }
+  }
+
+  .organization-subscribe button {
+    height: 44px;
+    max-height: none;
+  }
+
+  // The empty follow slot shouldn't add a gap
+  .organization-subscribe:empty {
+    display: none;
+  }
+
+  + .requests {
+    margin-top: var(--nc-section-gap);
+  }
+}
+
+// Table: soft header and row lines
+.requests-table {
+  th,
+  th a {
+    color: var(--nc-color-taupe);
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  th a:hover {
+    color: var(--nc-color-charcoal);
+  }
+
+  th,
+  td {
+    border-bottom-color: var(--nc-color-gray);
+  }
+
+  .striped-list-title {
+    color: var(--nc-color-charcoal);
+    font-weight: 450;
+  }
+}
+
+// Status labels as small pills
+.status-label {
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 450;
+  padding: 4px 12px;
+}

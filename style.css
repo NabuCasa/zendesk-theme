@@ -6807,6 +6807,118 @@ main > .container > h2,
   z-index: 1;
 }
 
+.search:has(.search-icon) input[type=search],
+.search-container input[type=search] {
+  padding-left: 2.75rem !important;
+}
+
+/***** Requests page *****/
+.my-activities-header {
+  padding-top: var(--nc-section-gap);
+}
+.my-activities-header h1 {
+  font-size: clamp(2.25rem, 1.8rem + 2.2vw, 3.5rem);
+  font-weight: 450;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.my-activities-sub-nav {
+  margin-bottom: var(--nc-section-gap);
+}
+.my-activities-sub-nav .collapsible-nav-border {
+  border-color: var(--nc-color-gray);
+}
+.my-activities-sub-nav .collapsible-nav-list li.current,
+.my-activities-sub-nav .collapsible-nav-list li[aria-selected=true] {
+  font-weight: 450;
+}
+
+.requests-table-toolbar {
+  gap: 1rem;
+}
+.requests-table-toolbar .search {
+  align-items: center;
+  position: relative;
+}
+.requests-table-toolbar .search .search-icon {
+  color: var(--nc-color-charcoal);
+  height: 16px;
+  left: 1rem;
+  width: 16px;
+}
+[dir=rtl] .requests-table-toolbar .search .search-icon {
+  left: auto;
+  right: 1rem;
+}
+.requests-table-toolbar .search input[type=search] {
+  background-color: var(--nc-color-gray);
+  border: 1px solid transparent;
+  border-radius: 100px;
+  font-size: 1rem;
+  height: 44px;
+}
+.requests-table-toolbar .search input[type=search]:focus {
+  border-color: var(--nc-color-charcoal);
+}
+.requests-table-toolbar .request-filter-label {
+  color: var(--nc-color-taupe);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+.requests-table-toolbar select {
+  background-color: var(--nc-color-gray);
+  background-position: right 1rem center;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+  font-size: 1rem;
+  height: 44px;
+  max-height: none;
+  margin-bottom: 0;
+  min-width: 10rem;
+  padding: 0 2.5rem 0 1.25rem;
+}
+.requests-table-toolbar select:focus {
+  border-color: var(--nc-color-charcoal);
+}
+.requests-table-toolbar .organization-subscribe button {
+  height: 44px;
+  max-height: none;
+}
+.requests-table-toolbar .organization-subscribe:empty {
+  display: none;
+}
+.requests-table-toolbar + .requests {
+  margin-top: var(--nc-section-gap);
+}
+
+.requests-table th,
+.requests-table th a {
+  color: var(--nc-color-taupe);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.requests-table th a:hover {
+  color: var(--nc-color-charcoal);
+}
+.requests-table th,
+.requests-table td {
+  border-bottom-color: var(--nc-color-gray);
+}
+.requests-table .striped-list-title {
+  color: var(--nc-color-charcoal);
+  font-weight: 450;
+}
+
+.status-label {
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 450;
+  padding: 4px 12px;
+}
+
 /***** Article table of contents *****/
 .article-toc {
   flex: 1 1 100%;
