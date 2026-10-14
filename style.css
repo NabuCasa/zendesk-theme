@@ -7449,3 +7449,16 @@ main > .container > h2,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.hero-hardware {
+  display: none;
+}
+
+.hardware-view .hero-default,
+.hardware-view .category-card[data-name="Home Assistant Cloud"],
+.hardware-view .knowledge-base .articles {
+  display: none;
+}
+.hardware-view .hero-hardware {
+  display: revert;
+}

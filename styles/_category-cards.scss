@@ -254,3 +254,22 @@ $home-sidebar-width: 1280px;
     }
   }
 }
+
+// Hardware-only view of the home page (/hc/en-us?hardware): the hero and
+// heading switch to hardware wording, and Cloud and the promoted articles are
+// left out. The class is set by a script at the top of home_page.hbs.
+.hero-hardware {
+  display: none;
+}
+
+.hardware-view {
+  .hero-default,
+  .category-card[data-name="Home Assistant Cloud"],
+  .knowledge-base .articles {
+    display: none;
+  }
+
+  .hero-hardware {
+    display: revert;
+  }
+}
