@@ -603,19 +603,43 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   border-right-color: transparent;
 }
 
+// Breadcrumbs + search bar under the masthead. Stacked (breadcrumbs, then a
+// full-width search) below desktop width; side by side on desktop.
 .sub-hero {
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 1rem var(--nc-section-gap);
   margin: 0 0 var(--nc-section-gap);
 
-  .breadcrumbs {
-    padding: 0;
+  .sub-nav {
+    align-items: stretch;
+    min-width: 0;
+    width: 100%;
   }
 
   .search-wrapper {
     margin: 0;
+    max-width: none;
+    width: 100%;
 
     form {
       margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    align-items: center;
+    flex-direction: row;
+
+    .sub-nav {
+      flex: 1 1 auto;
+      width: auto;
+    }
+
+    .search-wrapper {
+      flex: 0 0 auto;
+      width: clamp(20rem, 28vw, 26rem);
     }
   }
 }
@@ -632,6 +656,58 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   &:last-child {
     color: var(--nc-color-charcoal);
     font-weight: 450;
+  }
+}
+
+// Page breadcrumbs (articles, sections, categories, search results) stay on a
+// single line: long names are shortened with an ellipsis, parent levels first
+.sub-nav .breadcrumbs {
+  flex-wrap: nowrap;
+  margin: 0;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    flex: 0 3 auto;
+    max-width: none;
+    min-width: 0;
+
+    // The short home step never shrinks
+    &:first-child {
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      flex-shrink: 1;
+    }
+
+    &::before {
+      flex-shrink: 0;
+    }
+
+    a {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  // On phones: smaller text, and skip the "home" step (the logo goes home)
+  @include mobile {
+    li {
+      font-size: 0.8125rem;
+    }
+
+    li:first-child:not(:last-child) {
+      display: none;
+
+      + li::before {
+        display: none;
+      }
+    }
   }
 }
 

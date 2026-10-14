@@ -6243,17 +6243,38 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
 }
 
 .sub-hero {
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 1rem var(--nc-section-gap);
   margin: 0 0 var(--nc-section-gap);
 }
-.sub-hero .breadcrumbs {
-  padding: 0;
+.sub-hero .sub-nav {
+  align-items: stretch;
+  min-width: 0;
+  width: 100%;
 }
 .sub-hero .search-wrapper {
   margin: 0;
+  max-width: none;
+  width: 100%;
 }
 .sub-hero .search-wrapper form {
   margin-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .sub-hero {
+    align-items: center;
+    flex-direction: row;
+  }
+  .sub-hero .sub-nav {
+    flex: 1 1 auto;
+    width: auto;
+  }
+  .sub-hero .search-wrapper {
+    flex: 0 0 auto;
+    width: clamp(20rem, 28vw, 26rem);
+  }
 }
 
 /***** Breadcrumbs *****/
@@ -6267,6 +6288,46 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
 .breadcrumbs li:last-child {
   color: var(--nc-color-charcoal);
   font-weight: 450;
+}
+
+.sub-nav .breadcrumbs {
+  flex-wrap: nowrap;
+  margin: 0;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.sub-nav .breadcrumbs li {
+  flex: 0 3 auto;
+  max-width: none;
+  min-width: 0;
+}
+.sub-nav .breadcrumbs li:first-child {
+  flex-shrink: 0;
+}
+.sub-nav .breadcrumbs li:last-child {
+  flex-shrink: 1;
+}
+.sub-nav .breadcrumbs li::before {
+  flex-shrink: 0;
+}
+.sub-nav .breadcrumbs li a {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .sub-nav .breadcrumbs li {
+    font-size: 0.8125rem;
+  }
+  .sub-nav .breadcrumbs li:first-child:not(:last-child) {
+    display: none;
+  }
+  .sub-nav .breadcrumbs li:first-child:not(:last-child) + li::before {
+    display: none;
+  }
 }
 
 /***** Cards *****/
