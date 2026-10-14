@@ -722,6 +722,11 @@ section.section.hero[data-category="Home Assistant Cloud"] {
       + li::before {
         display: none;
       }
+
+      // A step left on its own (e.g. "Submit a request") can use the full width
+      + li:last-child {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -1517,4 +1522,33 @@ main > .container > h2,
   font-size: 0.75rem;
   font-weight: 450;
   padding: 4px 12px;
+}
+
+// Page columns never grow wider than the screen. In the stacked phone layout
+// the base theme let a column size itself to its widest content (for example
+// the ticket form's editor toolbar), pushing fields off the right edge.
+.layout > .column,
+.section-container > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.section-container > * {
+  flex: 1 1 auto;
+}
+
+/***** Submit a request form *****/
+#new-request-form {
+  // Submit button as a charcoal pill, like the other buttons
+  button[type="submit"] {
+    border-radius: 100px;
+    height: 44px;
+    padding: 0 1.75rem;
+    transition: box-shadow 220ms ease-out;
+
+    &:hover,
+    &:focus-visible {
+      box-shadow: var(--nc-ring);
+    }
+  }
 }

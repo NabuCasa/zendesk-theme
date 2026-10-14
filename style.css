@@ -6336,6 +6336,9 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   .sub-nav .breadcrumbs li:first-child:not(:last-child) + li::before {
     display: none;
   }
+  .sub-nav .breadcrumbs li:first-child:not(:last-child) + li:last-child {
+    max-width: 100%;
+  }
 }
 
 /***** Cards *****/
@@ -6986,6 +6989,27 @@ main > .container > h2,
   font-size: 0.75rem;
   font-weight: 450;
   padding: 4px 12px;
+}
+
+.layout > .column,
+.section-container > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.section-container > * {
+  flex: 1 1 auto;
+}
+
+/***** Submit a request form *****/
+#new-request-form button[type=submit] {
+  border-radius: 100px;
+  height: 44px;
+  padding: 0 1.75rem;
+  transition: box-shadow 220ms ease-out;
+}
+#new-request-form button[type=submit]:hover, #new-request-form button[type=submit]:focus-visible {
+  box-shadow: var(--nc-ring);
 }
 
 /***** Article table of contents *****/
