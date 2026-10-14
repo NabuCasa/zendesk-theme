@@ -6401,6 +6401,7 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   font-weight: 450;
   line-height: 1.05;
   margin-bottom: 0.5rem !important;
+  overflow-wrap: anywhere;
 }
 
 .article-meta .meta-data {
@@ -6493,6 +6494,24 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
 }
 .article-body td:not(:has(code)) {
   overflow-wrap: normal;
+}
+.article-body img[style*=max-width] {
+  height: auto;
+  width: 100%;
+}
+.article-body iframe {
+  max-width: 100%;
+}
+.article-body iframe[src*=youtube],
+.article-body iframe[src*=vimeo] {
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+}
+.article-body .step-content-wrapper > *,
+.article-body .step-content {
+  max-width: 100%;
+  min-width: 0;
 }
 .article-body figcaption {
   background-color: transparent;
