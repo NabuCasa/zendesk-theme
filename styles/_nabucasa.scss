@@ -708,24 +708,25 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   }
 
   // On phones: smaller text, each step capped below half the width so names
-  // shorten early and leave breathing room, and skip the "home" step (the logo
-  // goes home)
+  // shorten early and leave breathing room, and skip the "home" step on longer
+  // trails (the logo goes home)
   @include mobile {
+    // Full row width, so the half-width cap isn't taken from a shrunken row
+    // (at exactly 768px the tablet row layout also applies)
+    flex: 1 1 auto;
+
     li {
       font-size: 0.8125rem;
       max-width: calc(50% - 1rem);
     }
 
-    li:first-child:not(:last-child) {
+    // Only on trails of three or more steps: a two-step trail (e.g. home >
+    // Submit a request) would otherwise just repeat the page heading
+    li:first-child:nth-last-child(n + 3) {
       display: none;
 
       + li::before {
         display: none;
-      }
-
-      // A step left on its own (e.g. "Submit a request") can use the full width
-      + li:last-child {
-        max-width: 100%;
       }
     }
   }
@@ -1634,4 +1635,9 @@ main > .container > h2,
       box-shadow: var(--nc-ring);
     }
   }
+}
+
+// Short hyphenated words in headings (wrapped by src/headings.js)
+.nowrap {
+  white-space: nowrap;
 }

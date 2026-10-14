@@ -1450,7 +1450,7 @@ section.section.hero[data-category="Home Assistant Connect ZBT-1"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-1"] [data-title]:before {
-  content: "Home Assistant Connect ZBT-1";
+  content: "Home Assistant Connect ZBT-⁠1";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-1"] [data-description]:before {
@@ -1487,7 +1487,7 @@ section.section.hero[data-category="Home Assistant Connect ZBT-2"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-title]:before {
-  content: "Home Assistant Connect ZBT-2";
+  content: "Home Assistant Connect ZBT-⁠2";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-description]:before {
@@ -1524,7 +1524,7 @@ section.section.hero[data-category="Home Assistant Connect ZWA-2"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-title]:before {
-  content: "Home Assistant Connect ZWA-2";
+  content: "Home Assistant Connect ZWA-⁠2";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-description]:before {
@@ -6326,18 +6326,18 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   text-decoration-color: var(--nc-color-orange);
 }
 @media (max-width: 768px) {
+  .sub-nav .breadcrumbs {
+    flex: 1 1 auto;
+  }
   .sub-nav .breadcrumbs li {
     font-size: 0.8125rem;
     max-width: calc(50% - 1rem);
   }
-  .sub-nav .breadcrumbs li:first-child:not(:last-child) {
+  .sub-nav .breadcrumbs li:first-child:nth-last-child(n+3) {
     display: none;
   }
-  .sub-nav .breadcrumbs li:first-child:not(:last-child) + li::before {
+  .sub-nav .breadcrumbs li:first-child:nth-last-child(n+3) + li::before {
     display: none;
-  }
-  .sub-nav .breadcrumbs li:first-child:not(:last-child) + li:last-child {
-    max-width: 100%;
   }
 }
 
@@ -7071,6 +7071,10 @@ main > .container > h2,
 }
 #new-request-form button[type=submit]:hover, #new-request-form button[type=submit]:focus-visible {
   box-shadow: var(--nc-ring);
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /***** Article table of contents *****/
