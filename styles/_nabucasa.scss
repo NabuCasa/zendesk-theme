@@ -859,16 +859,70 @@ section.section.hero[data-category="Home Assistant Cloud"] {
     padding-left: 1rem;
   }
 
+  // Long URLs, hostnames and IDs may break anywhere rather than push the page
+  // wider than a phone screen
+  overflow-wrap: anywhere;
+
   :not(pre)>code {
     background: var(--nc-color-light-gray);
     border: 0;
     border-radius: 0.375rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   pre {
     background: var(--nc-color-light-gray);
     border: 0;
     border-radius: 0.75rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  // Tables never grow wider than the article; a table that still can't fit
+  // scrolls sideways inside its own box instead of the whole page
+  table {
+    background-color: var(--nc-color-light-gray);
+    border-collapse: collapse;
+    border-radius: 0.75rem;
+    display: block;
+    font-size: 0.875rem;
+    margin: 1rem 0;
+    max-width: 100%;
+    overflow-x: auto;
+    width: fit-content;
+
+    @include tablet {
+      font-size: 0.9375rem;
+    }
+  }
+
+  th,
+  td {
+    border: 0;
+    min-width: 5rem;
+    padding: 0.625rem 0.875rem;
+    text-align: start;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 500;
+  }
+
+  tr + tr,
+  tbody tr {
+    border-top: 1px solid var(--nc-color-white);
+  }
+
+  // Code is already on a grey table, so it goes white to stand out
+  td code {
+    background: var(--nc-color-white);
+  }
+
+  // Short labels like "CNAME" stay on one line
+  td:not(:has(code)) {
+    overflow-wrap: normal;
   }
 
   figcaption {
