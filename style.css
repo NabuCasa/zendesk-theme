@@ -6402,6 +6402,7 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
   line-height: 1.05;
   margin-bottom: 0.5rem !important;
   overflow-wrap: anywhere;
+  overflow: visible;
 }
 
 .article-meta .meta-data {

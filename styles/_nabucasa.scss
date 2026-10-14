@@ -812,6 +812,10 @@ section.section.hero[data-category="Home Assistant Cloud"] {
   margin-bottom: 0.5rem !important;
   // Titles that include a URL (e.g. http://homeassistant.local) can still wrap
   overflow-wrap: anywhere;
+  // Copenhagen hides overflow here for a one-line ellipsis, but our titles wrap,
+  // and with the tight line height it clipped descenders on the last line (the
+  // "g" in Zigbee)
+  overflow: visible;
 }
 
 .article-meta .meta-data {
