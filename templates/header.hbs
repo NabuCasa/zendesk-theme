@@ -74,7 +74,10 @@
               {{#if signed_in}}
                 {{link "sign_out" role="menuitem" class='btn btn-light btn-large'}}
               {{else}}
-                {{#link "sign_in" role="menuitem" class='btn btn-light btn-large'}}{{t 'sign_in'}}{{/link}}
+                {{!-- Off until end-user sign-in is enabled: Guide > Customize design > Header --}}
+                {{#if settings.show_sign_in}}
+                  {{#link "sign_in" role="menuitem" class='btn btn-light btn-large'}}{{t 'sign_in'}}{{/link}}
+                {{/if}}
               {{/if}}
             </li>
           </ul>

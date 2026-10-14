@@ -235,6 +235,18 @@
       ]
     },
     {
+      "label": "header_group_label",
+      "variables": [
+        {
+          "identifier": "show_sign_in",
+          "type": "checkbox",
+          "description": "show_sign_in_description",
+          "label": "show_sign_in_label",
+          "value": false
+        }
+      ]
+    },
+    {
       "label": "images_group_label",
       "variables": [
         {
