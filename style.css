@@ -6312,15 +6312,23 @@ section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
 .sub-nav .breadcrumbs li::before {
   flex-shrink: 0;
 }
+.sub-nav .breadcrumbs li:last-child {
+  pointer-events: auto;
+}
 .sub-nav .breadcrumbs li a {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.sub-nav .breadcrumbs li a:hover, .sub-nav .breadcrumbs li a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-orange);
+}
 @media (max-width: 768px) {
   .sub-nav .breadcrumbs li {
     font-size: 0.8125rem;
+    max-width: calc(50% - 1rem);
   }
   .sub-nav .breadcrumbs li:first-child:not(:last-child) {
     display: none;

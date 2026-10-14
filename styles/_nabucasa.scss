@@ -687,18 +687,33 @@ section.section.hero[data-category="Home Assistant Cloud"] {
       flex-shrink: 0;
     }
 
+    // Every step is a working link, including the last one (the base theme
+    // switched the last step off)
+    &:last-child {
+      pointer-events: auto;
+    }
+
     a {
       min-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+        text-decoration-color: var(--nc-color-orange);
+      }
     }
   }
 
-  // On phones: smaller text, and skip the "home" step (the logo goes home)
+  // On phones: smaller text, each step capped below half the width so names
+  // shorten early and leave breathing room, and skip the "home" step (the logo
+  // goes home)
   @include mobile {
     li {
       font-size: 0.8125rem;
+      max-width: calc(50% - 1rem);
     }
 
     li:first-child:not(:last-child) {
