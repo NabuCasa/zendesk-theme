@@ -1,6 +1,17 @@
 <footer class="footer">
-  <div class="footer-inner">
-    {{#link 'help_center'}}{{help_center.name}}{{/link}}
+  <section class="footer-panel">
+    <nav class="footer-links" aria-label="Nabu Casa">
+      <ul>
+        <li>{{#link 'help_center'}}Support{{/link}}</li>
+        <li><a href="https://www.nabucasa.com/about-us/">About Nabu Casa</a></li>
+        <li><a href="https://www.nabucasa.com/news/">News</a></li>
+        <li><a href="https://account.nabucasa.com/login" target="_blank" rel="noopener noreferrer">Log in to Link</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div class="footer-bottom">
+    <span>&copy; Nabu Casa, Inc.</span>
 
     <div class="footer-language-selector">
       {{#if alternative_locales}}

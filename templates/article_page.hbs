@@ -46,7 +46,21 @@
       </header>
     </div>
   </div>
-  <div class="layout">
+  <div class="layout article-layout">
+    <aside class="article-toc" data-article-toc hidden>
+      <details class="article-toc-details" open>
+        <summary class="article-toc-title" id="article-toc-title">
+          On this page
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="article-toc-chevron" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+          </svg>
+        </summary>
+        <nav class="article-toc-nav" aria-labelledby="article-toc-title">
+          <ol class="article-toc-list"></ol>
+        </nav>
+        <a href="#article-container" class="article-toc-top">Back to top</a>
+      </details>
+    </aside>
     <div class="column">
       <div class="article-container" id="article-container">
         {{#if false}}

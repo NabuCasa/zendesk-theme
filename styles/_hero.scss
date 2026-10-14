@@ -28,8 +28,10 @@
       color: #fff;
     }
 
+    // A word joiner (U+2060, invisible) after each hyphen stops "ZBT-2" from
+    // wrapping as "ZBT-" / "2". Outfit has no non-breaking hyphen glyph.
     [data-title]:before {
-      content: "Home Assistant #{$product}";
+      content: str-replace("Home Assistant #{$product}", "-", "-\2060");
     }
 
     [data-description]:before {
