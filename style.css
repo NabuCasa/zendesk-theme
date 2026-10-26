@@ -194,7 +194,7 @@ template {
 body {
   background-color: #F8FDFF;
   color: #000;
-  font-family: "Figtree", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -217,7 +217,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Figtree", serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 1.5rem;
@@ -1343,7 +1343,7 @@ section.section.hero[data-category="Home Assistant Green"] [data-title]:before {
 }
 main > .visibility-hidden:has(ol li a[href$=Green]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Green"] [data-description]:before {
-  content: "The affordable Home Assistant Green is the easiest way you can start using Home Assistant. It's plug-and-play and comes with Home Assistant already installed.";
+  content: "The easiest way to start using Home Assistant. Get started in minutes and build a fully private smart home, all in one app.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Yellow]) + section.hero,
@@ -1417,7 +1417,7 @@ section.section.hero[data-category="Home Assistant Voice Preview Edition"] [data
 }
 main > .visibility-hidden:has(ol li a[href$=Voice-Preview-Edition]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Voice Preview Edition"] [data-description]:before {
-  content: "Built for Home Assistant - Easy Setup - one USB-C cable and setup wizard, no assembly required.";
+  content: "A voice assistant designed around privacy and local control that looks and feels great in the home.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero,
@@ -1450,7 +1450,7 @@ section.section.hero[data-category="Home Assistant Connect ZBT-1"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-1"] [data-title]:before {
-  content: "Home Assistant Connect ZBT-1";
+  content: "Home Assistant Connect ZBT-⁠1";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-1]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-1"] [data-description]:before {
@@ -1487,11 +1487,11 @@ section.section.hero[data-category="Home Assistant Connect ZBT-2"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-title]:before {
-  content: "Home Assistant Connect ZBT-2";
+  content: "Home Assistant Connect ZBT-⁠2";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZBT-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZBT-2"] [data-description]:before {
-  content: "The easiest way to start with Zigbee or Thread is now even better.";
+  content: "This adapter is the easiest way to add Zigbee or Thread (Matter) devices to Home Assistant – with the highest performance and stability.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero,
@@ -1524,11 +1524,11 @@ section.section.hero[data-category="Home Assistant Connect ZWA-2"] .hero-inner {
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero [data-title]:before,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-title]:before {
-  content: "Home Assistant Connect ZWA-2";
+  content: "Home Assistant Connect ZWA-⁠2";
 }
 main > .visibility-hidden:has(ol li a[href$=Connect-ZWA-2]) + section.hero [data-description]:before,
 section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-description]:before {
-  content: "The ultimate way to connect Z-Wave devices to Home Assistant.";
+  content: "A super powerful Z-Wave adapter giving maximum range and reliability, including support for Z-Wave Long Range.";
 }
 
 main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero,
@@ -3048,7 +3048,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   word-break: break-word;
   word-wrap: break-word;
   display: flow-root;
-  font-family: "Figtree", serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1.6;
   overflow-x: auto;
 }
@@ -3357,7 +3357,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   content: attr(data-follower-count);
   color: $brand_color;
   display: inline-block;
-  font-family: "Figtree", serif;
+  font-family: "Outfit", sans-serif;
   margin-left: 15px;
   padding-left: 10px;
   position: absolute;
@@ -3589,7 +3589,7 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   margin-bottom: 30px;
 }
 .post-content {
-  font-family: "Figtree", serif;
+  font-family: "Outfit", sans-serif;
   line-height: 1.6;
   word-break: break-word;
 }
@@ -5651,7 +5651,7 @@ zd-summary-block {
   height: 18px;
 }
 .callout.note {
-  background: #FFFFFF;
+  background: #DCE2EB;
 }
 .callout.important {
   background: #EEEEEE;
@@ -5761,4 +5761,1709 @@ zd-summary-block {
 .steps .step .step-content-wrapper .step-content {
   flex-basis: 300px;
   flex-grow: 1;
+}
+
+/***** Nabu Casa website look *****/
+:root {
+  --nc-font-sans: "Outfit", sans-serif;
+  --nc-font-serif: "Source Serif 4", "Source Serif", serif;
+  --nc-color-white: #ffffff;
+  --nc-color-light-gray: #f0f1f1;
+  --nc-color-gray: #ecebe7;
+  --nc-color-taupe: #8f8e82;
+  --nc-color-charcoal: #1f1f1c;
+  --nc-color-orange: #ec7523;
+  --nc-color-sun: #ffde77;
+  --nc-color-tin: #a8b7cd;
+  --nc-color-green: #559361;
+  --nc-color-highlight: #c05811;
+  --nc-radius-md: 1rem;
+  --nc-gutter: 1.25rem;
+  --nc-section-gap: 2rem;
+  --nc-stack-gap: 1rem;
+  --nc-card-padding: 1.5rem;
+  --nc-navigation-height: 48px;
+  --nc-ring: 0 0 0 1px var(--nc-color-charcoal), 0 0 0 2px var(--nc-color-charcoal), 0 0 0 3px var(--nc-color-charcoal);
+  --nc-ring-sun: 0 0 0 1px var(--nc-color-sun), 0 0 0 2px var(--nc-color-sun), 0 0 0 3px var(--nc-color-sun);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nc-gutter: 2rem;
+    --nc-section-gap: 3rem;
+    --nc-stack-gap: 1.25rem;
+    --nc-card-padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --nc-navigation-height: 54px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  background-color: var(--nc-color-white);
+  color: var(--nc-color-charcoal);
+  font-family: var(--nc-font-sans);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--nc-font-sans);
+  font-weight: 450;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.12em;
+}
+a:hover, a:focus-visible {
+  text-decoration-color: var(--nc-color-orange);
+}
+a.external-link::after {
+  background-color: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--nc-color-charcoal);
+  outline-offset: 2px;
+}
+
+hr {
+  background-color: var(--nc-color-gray);
+}
+
+.eyebrow {
+  font-family: var(--nc-font-serif);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+/***** Buttons *****/
+.btn {
+  border-radius: 100px;
+  font-weight: 450;
+  transition: box-shadow 220ms ease-out, color 300ms ease-out, background-color 220ms ease-out;
+}
+.btn.btn-primary, .btn.btn-dark {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus-visible, .btn.btn-primary:active, .btn.btn-dark:hover, .btn.btn-dark:focus-visible, .btn.btn-dark:active {
+  background-color: var(--nc-color-charcoal);
+  box-shadow: var(--nc-ring);
+}
+.btn.btn-light, .btn.btn-white {
+  background-color: var(--nc-color-gray);
+  color: var(--nc-color-charcoal);
+}
+.btn.btn-light:hover, .btn.btn-light:focus-visible, .btn.btn-light:active, .btn.btn-white:hover, .btn.btn-white:focus-visible, .btn.btn-white:active {
+  background-color: var(--nc-color-sun);
+  color: var(--nc-color-charcoal);
+  box-shadow: var(--nc-ring-sun);
+}
+.btn.btn-text.btn-text-light, .btn.btn-text.btn-text-light:hover, .btn.btn-text.btn-text-light:focus, .btn.btn-text.btn-text-light:active, .btn.btn-text.btn-text-dark, .btn.btn-text.btn-text-dark:hover, .btn.btn-text.btn-text-dark:focus, .btn.btn-text.btn-text-dark:active {
+  color: var(--nc-color-charcoal);
+}
+
+.button, .split-button button, .section-subscribe button, .article-subscribe button, .community-follow button, .requests-table-toolbar .organization-subscribe button, .subscriptions-subscribe button, .pagination-next-link, .pagination-prev-link, .pagination-first-link, .pagination-last-link {
+  border-radius: 100px;
+  border-color: var(--nc-color-charcoal);
+  color: var(--nc-color-charcoal);
+}
+.button:visited, .split-button button:visited, .section-subscribe button:visited, .article-subscribe button:visited, .community-follow button:visited, .requests-table-toolbar .organization-subscribe button:visited, .subscriptions-subscribe button:visited, .pagination-next-link:visited, .pagination-prev-link:visited, .pagination-first-link:visited, .pagination-last-link:visited {
+  color: var(--nc-color-charcoal);
+}
+.button:hover, .split-button button:hover, .section-subscribe button:hover, .article-subscribe button:hover, .community-follow button:hover, .requests-table-toolbar .organization-subscribe button:hover, .subscriptions-subscribe button:hover, .pagination-next-link:hover, .pagination-prev-link:hover, .pagination-first-link:hover, .pagination-last-link:hover, .button:active, .split-button button:active, .section-subscribe button:active, .article-subscribe button:active, .community-follow button:active, .requests-table-toolbar .organization-subscribe button:active, .subscriptions-subscribe button:active, .pagination-next-link:active, .pagination-prev-link:active, .pagination-first-link:active, .pagination-last-link:active, .button:focus, .split-button button:focus, .section-subscribe button:focus, .article-subscribe button:focus, .community-follow button:focus, .requests-table-toolbar .organization-subscribe button:focus, .subscriptions-subscribe button:focus, .pagination-next-link:focus, .pagination-prev-link:focus, .pagination-first-link:focus, .pagination-last-link:focus, .button.button-primary, .split-button button.button-primary, .section-subscribe button.button-primary, .article-subscribe button.button-primary, .community-follow button.button-primary, .requests-table-toolbar .organization-subscribe button.button-primary, .subscriptions-subscribe button.button-primary, .button-primary.pagination-next-link, .button-primary.pagination-prev-link, .button-primary.pagination-first-link, .button-primary.pagination-last-link, .section-subscribe button[data-selected=true], .article-subscribe button[data-selected=true], .requests-table-toolbar .organization-subscribe button[data-selected=true], .subscriptions-subscribe button[data-selected=true] {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.button.button-primary:hover, .section-subscribe button.button-primary:hover, .article-subscribe button.button-primary:hover, .community-follow button.button-primary:hover, .requests-table-toolbar .organization-subscribe button.button-primary:hover, .subscriptions-subscribe button.button-primary:hover, .button-primary.pagination-next-link:hover, .button-primary.pagination-prev-link:hover, .button-primary.pagination-first-link:hover, .button-primary.pagination-last-link:hover, .split-button button:hover, .section-subscribe button[data-selected=true]:hover, .article-subscribe button[data-selected=true]:hover, .requests-table-toolbar .organization-subscribe button[data-selected=true]:hover, .subscriptions-subscribe button[data-selected=true]:hover, .button.button-primary:focus, .split-button button.button-primary:focus, .section-subscribe button.button-primary:focus, .article-subscribe button.button-primary:focus, .community-follow button.button-primary:focus, .requests-table-toolbar .organization-subscribe button.button-primary:focus, .subscriptions-subscribe button.button-primary:focus, .button-primary.pagination-next-link:focus, .button-primary.pagination-prev-link:focus, .button-primary.pagination-first-link:focus, .button-primary.pagination-last-link:focus, .section-subscribe button[data-selected=true]:focus, .article-subscribe button[data-selected=true]:focus, .requests-table-toolbar .organization-subscribe button[data-selected=true]:focus, .subscriptions-subscribe button[data-selected=true]:focus, .button.button-primary:active, .split-button button.button-primary:active, .section-subscribe button.button-primary:active, .article-subscribe button.button-primary:active, .community-follow button.button-primary:active, .requests-table-toolbar .organization-subscribe button.button-primary:active, .subscriptions-subscribe button.button-primary:active, .button-primary.pagination-next-link:active, .button-primary.pagination-prev-link:active, .button-primary.pagination-first-link:active, .button-primary.pagination-last-link:active, .section-subscribe button[data-selected=true]:active, .article-subscribe button[data-selected=true]:active, .requests-table-toolbar .organization-subscribe button[data-selected=true]:active, .subscriptions-subscribe button[data-selected=true]:active {
+  background-color: var(--nc-color-charcoal);
+  border-color: var(--nc-color-charcoal);
+  box-shadow: var(--nc-ring);
+}
+
+/***** Header: full-width bar, square edges *****/
+.header {
+  background-color: var(--nc-color-gray);
+  height: 74px;
+  position: relative;
+  transition: background-color 200ms ease-out;
+  z-index: 20;
+}
+.header a {
+  color: var(--nc-color-charcoal);
+}
+
+.logo img {
+  height: 36px;
+  max-height: 36px;
+  width: auto;
+}
+
+.user-nav-list {
+  gap: 2rem;
+}
+.user-nav-list .btn {
+  font-size: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  font-weight: 300;
+  height: calc(var(--nc-navigation-height) - 12px);
+}
+.user-nav-list .btn.btn-text {
+  height: var(--nc-navigation-height);
+}
+.user-nav-list .btn.btn-text:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-orange);
+}
+.user-nav-list .btn.btn-white {
+  padding: 0 1.5rem;
+}
+.user-nav-list .btn.btn-white, .user-nav-list .btn.btn-white:hover, .user-nav-list .btn.btn-white:focus, .user-nav-list .btn.btn-white:focus-visible, .user-nav-list .btn.btn-white:active {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.user-nav-list .btn.btn-white:hover, .user-nav-list .btn.btn-white:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+
+.nav-wrapper-desktop .user-info .dropdown-toggle,
+.nav-wrapper-desktop .user-info .dropdown-toggle span {
+  color: var(--nc-color-charcoal);
+}
+
+/***** Mobile menu: full-screen sun panel, like the nabucasa.com mobile navigation *****/
+@media (max-width: 1023px) {
+  html.mobile-menu-open,
+  html.mobile-menu-open body {
+    overflow: hidden;
+  }
+  html.mobile-menu-open .header {
+    background-color: var(--nc-color-sun);
+  }
+  html.mobile-menu-open .logo img {
+    filter: brightness(0);
+  }
+}
+.nav-wrapper-mobile .menu-button-mobile {
+  align-items: center;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+  gap: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  justify-content: center;
+  padding: 0 0.25rem;
+}
+.nav-wrapper-mobile .menu-button-mobile .user-avatar {
+  height: 32px;
+  width: 32px;
+}
+.nav-wrapper-mobile .menu-button-mobile .icon-menu,
+.nav-wrapper-mobile .menu-button-mobile .icon-close {
+  border-radius: 50%;
+  height: 40px;
+  padding: 11px;
+  width: 40px;
+}
+.nav-wrapper-mobile .menu-button-mobile .icon-close {
+  display: none;
+}
+.nav-wrapper-mobile .menu-button-mobile[aria-expanded=true] .icon-menu {
+  display: none;
+}
+.nav-wrapper-mobile .menu-button-mobile[aria-expanded=true] .icon-close {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+  display: block;
+}
+.nav-wrapper-mobile .menu-list-mobile {
+  background-color: var(--nc-color-sun);
+  border: 0;
+  box-shadow: none;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: calc(100vh - 74px);
+  height: calc(100dvh - 74px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.5rem var(--nc-gutter) var(--nc-section-gap);
+}
+.nav-wrapper-mobile .menu-list-mobile[aria-expanded=true] {
+  animation: nc-menu-in 220ms ease-out;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .nav-divider {
+  display: none;
+}
+.nav-wrapper-mobile .menu-list-mobile-items a,
+.nav-wrapper-mobile .menu-list-mobile-items button {
+  align-items: center;
+  color: var(--nc-color-charcoal);
+  display: flex;
+  font-size: 1.375rem;
+  font-weight: 450;
+  gap: 0.75rem;
+  justify-content: space-between;
+  letter-spacing: -0.01em;
+  padding: 1.125rem 0;
+}
+.nav-wrapper-mobile .menu-list-mobile-items a:active, .nav-wrapper-mobile .menu-list-mobile-items a:focus, .nav-wrapper-mobile .menu-list-mobile-items a:hover,
+.nav-wrapper-mobile .menu-list-mobile-items button:active,
+.nav-wrapper-mobile .menu-list-mobile-items button:focus,
+.nav-wrapper-mobile .menu-list-mobile-items button:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-charcoal);
+}
+.nav-wrapper-mobile .menu-list-mobile-items a.external-link::after,
+.nav-wrapper-mobile .menu-list-mobile-items button.external-link::after {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .my-profile {
+  justify-content: flex-start;
+  line-height: 1.2;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .my-profile .my-profile-tooltip {
+  color: var(--nc-color-charcoal);
+  font-family: var(--nc-font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.25rem;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .menu-profile-avatar {
+  height: 48px;
+  margin: 0;
+  width: 48px;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions {
+  border-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: var(--nc-section-gap);
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn {
+  font-size: 1.125rem;
+  height: 54px;
+  justify-content: center;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  width: 100%;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus-visible, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:active {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+  text-decoration: none;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-dark:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus-visible, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:active {
+  background-color: var(--nc-color-white);
+  color: var(--nc-color-charcoal);
+  text-decoration: none;
+}
+.nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:hover, .nav-wrapper-mobile .menu-list-mobile-items .item-actions .btn-light:focus-visible {
+  box-shadow: 0 0 0 1px var(--nc-color-white), 0 0 0 2px var(--nc-color-white), 0 0 0 3px var(--nc-color-white);
+}
+
+@keyframes nc-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.dropdown-menu {
+  background-color: var(--nc-color-sun);
+  border: 0;
+  border-radius: var(--nc-radius-md);
+  box-shadow: none;
+  padding: 0.5rem;
+}
+.dropdown-menu [role=menuitem],
+.dropdown-menu [role=menuitemradio] {
+  border-radius: 0.5rem;
+  color: var(--nc-color-charcoal);
+}
+.dropdown-menu [role=menuitem]:hover, .dropdown-menu [role=menuitem]:focus,
+.dropdown-menu [role=menuitemradio]:hover,
+.dropdown-menu [role=menuitemradio]:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.dropdown-menu .separator {
+  border-color: var(--nc-color-white);
+}
+.dropdown-menu [role=separator]:last-child,
+.dropdown-menu [role=separator] + [role=separator] {
+  display: none;
+}
+
+/***** Hero *****/
+.hero {
+  background-color: var(--nc-color-gray);
+  background-image: none;
+  border-radius: var(--nc-radius-md);
+  margin: var(--nc-gutter) auto var(--nc-section-gap) !important;
+  max-width: calc(1400px - var(--nc-gutter) * 2);
+  overflow: hidden;
+  padding: 2.5rem 0;
+  text-align: left;
+  width: calc(100% - var(--nc-gutter) * 2);
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: clamp(3rem, 6vw, 6rem) 0;
+  }
+}
+.hero .container {
+  padding: 0 var(--nc-card-padding);
+}
+@media (min-width: 1024px) {
+  .hero .container {
+    padding: 0 3rem;
+  }
+}
+.hero-inner {
+  color: var(--nc-color-charcoal);
+}
+.hero-inner h2 {
+  font-size: clamp(2.75rem, 2.1rem + 3.2vw, 5rem);
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.hero-inner p {
+  font-family: var(--nc-font-serif);
+  font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+  font-weight: 300;
+  margin: 0;
+}
+.hero .search-wrapper {
+  margin: 2rem 0 0;
+  max-width: 760px;
+}
+@media (min-width: 768px) {
+  .hero .search-wrapper {
+    margin-top: 2.5rem;
+  }
+}
+
+section.section.hero::after {
+  background-color: rgba(31, 31, 28, 0.45) !important;
+}
+
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero,
+section.section.hero[data-category="Home Assistant Cloud"] {
+  background-color: var(--nc-color-tin);
+  background-image: none;
+}
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero::after,
+section.section.hero[data-category="Home Assistant Cloud"]::after {
+  content: none;
+}
+main > .visibility-hidden:has(ol li a[href$=Cloud]) + section.hero .hero-inner,
+section.section.hero[data-category="Home Assistant Cloud"] .hero-inner {
+  color: var(--nc-color-charcoal);
+}
+
+/***** Search *****/
+.search input[type=search],
+.search .clear-button {
+  background-color: var(--nc-color-white);
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+}
+.search input[type=search] {
+  font-weight: 300;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+.search input[type=search]::placeholder {
+  color: var(--nc-color-taupe);
+}
+.search input[type=search]:focus {
+  border-color: var(--nc-color-charcoal);
+  color: var(--nc-color-charcoal);
+}
+
+.search-wrapper.small .search input[type=search],
+.search-wrapper.small .search .clear-button,
+.sub-hero .search input[type=search],
+.sub-hero .search .clear-button {
+  background-color: var(--nc-color-gray);
+}
+
+[dir=ltr] .search-has-value input[type=search]:focus {
+  border-right-color: transparent;
+}
+
+.sub-hero {
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem var(--nc-section-gap);
+  margin: 0 0 var(--nc-section-gap);
+}
+.sub-hero .sub-nav {
+  align-items: stretch;
+  min-width: 0;
+  width: 100%;
+}
+.sub-hero .search-wrapper {
+  margin: 0;
+  max-width: none;
+  width: 100%;
+}
+.sub-hero .search-wrapper form {
+  margin-bottom: 0;
+}
+@media (min-width: 1024px) {
+  .sub-hero {
+    align-items: center;
+    flex-direction: row;
+  }
+  .sub-hero .sub-nav {
+    flex: 1 1 auto;
+    width: auto;
+  }
+  .sub-hero .search-wrapper {
+    flex: 0 0 auto;
+    width: clamp(20rem, 28vw, 26rem);
+  }
+}
+
+/***** Breadcrumbs *****/
+.breadcrumbs li {
+  color: var(--nc-color-taupe);
+  font-weight: 300;
+}
+.breadcrumbs li a {
+  color: var(--nc-color-charcoal);
+}
+.breadcrumbs li:last-child {
+  color: var(--nc-color-charcoal);
+  font-weight: 450;
+}
+
+.sub-nav .breadcrumbs {
+  flex-wrap: nowrap;
+  margin: 0;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.sub-nav .breadcrumbs li {
+  flex: 0 3 auto;
+  max-width: none;
+  min-width: 0;
+}
+.sub-nav .breadcrumbs li:first-child {
+  flex-shrink: 0;
+}
+.sub-nav .breadcrumbs li:last-child {
+  flex-shrink: 1;
+}
+.sub-nav .breadcrumbs li::before {
+  flex-shrink: 0;
+}
+.sub-nav .breadcrumbs li:last-child {
+  pointer-events: auto;
+}
+.sub-nav .breadcrumbs li a {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sub-nav .breadcrumbs li a:hover, .sub-nav .breadcrumbs li a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-orange);
+}
+@media (max-width: 768px) {
+  .sub-nav .breadcrumbs {
+    flex: 1 1 auto;
+  }
+  .sub-nav .breadcrumbs li {
+    font-size: 0.8125rem;
+    max-width: calc(50% - 1rem);
+  }
+  .sub-nav .breadcrumbs li:first-child:nth-last-child(n+3) {
+    display: none;
+  }
+  .sub-nav .breadcrumbs li:first-child:nth-last-child(n+3) + li::before {
+    display: none;
+  }
+}
+
+/***** Cards *****/
+.item-cards a.item-card {
+  transition: background-color 220ms ease-out, box-shadow 220ms ease-out;
+}
+.item-cards a.item-card:hover, .item-cards a.item-card:focus-visible {
+  background-color: var(--nc-color-sun);
+  box-shadow: none;
+}
+.item-cards .item-card {
+  background-color: var(--nc-color-gray);
+  border: 0;
+  border-radius: var(--nc-radius-md);
+  color: var(--nc-color-charcoal);
+}
+.item-cards .item-card-title {
+  font-weight: 450;
+  letter-spacing: -0.01em;
+}
+.item-cards .item-card-description {
+  color: var(--nc-color-charcoal);
+  font-weight: 300;
+}
+.item-cards .item-card.primary {
+  background-color: var(--nc-color-sun);
+}
+.item-cards .item-card.primary .item-card-description {
+  color: var(--nc-color-charcoal);
+}
+.item-cards .item-card.product, .item-cards .item-card.product:hover {
+  background-color: var(--nc-color-charcoal);
+}
+.item-cards .item-card.product .item-card-description,
+.item-cards .item-card.product .item-card-title {
+  color: var(--nc-color-white);
+}
+.item-cards .item-card-pill {
+  background-color: var(--nc-color-white);
+  color: var(--nc-color-charcoal);
+  font-weight: 300;
+  font-size: 13px;
+  padding: 4px 10px;
+}
+.item-cards .item-card-pill:hover {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.item-cards a.item-card:hover .item-card-pill {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.item-cards a.item-card:hover .item-card-pill:hover {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+
+/***** Article *****/
+.article-title {
+  font-size: clamp(2.25rem, 1.8rem + 2.2vw, 3.5rem);
+  font-weight: 450;
+  line-height: 1.05;
+  margin-bottom: 0.5rem !important;
+  overflow-wrap: anywhere;
+  overflow: visible;
+}
+
+.article-meta .meta-data {
+  color: var(--nc-color-taupe);
+  font-family: var(--nc-font-serif);
+}
+
+.article-body {
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.article-body a {
+  color: var(--nc-color-charcoal);
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-tin);
+}
+.article-body a:visited {
+  color: var(--nc-color-charcoal);
+}
+.article-body a:hover, .article-body a:active, .article-body a:focus {
+  color: var(--nc-color-charcoal);
+  text-decoration-color: var(--nc-color-orange);
+}
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+.article-body h2 {
+  font-size: clamp(1.75rem, 1.5rem + 1.2vw, 2.375rem);
+}
+.article-body h3 {
+  font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+}
+.article-body blockquote {
+  border-left: 0.25rem solid var(--nc-color-orange);
+  color: var(--nc-color-charcoal);
+  font-style: normal;
+  padding-left: 1rem;
+}
+.article-body :not(pre) > code {
+  background: var(--nc-color-light-gray);
+  border: 0;
+  border-radius: 0.375rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.article-body pre {
+  background: var(--nc-color-light-gray);
+  border: 0;
+  border-radius: 0.75rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.article-body table {
+  background-color: var(--nc-color-light-gray);
+  border-collapse: collapse;
+  border-radius: 0.75rem;
+  display: block;
+  font-size: 0.875rem;
+  margin: 1rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+  width: fit-content;
+}
+@media (min-width: 768px) {
+  .article-body table {
+    font-size: 0.9375rem;
+  }
+}
+.article-body th,
+.article-body td {
+  border: 0;
+  min-width: 5rem;
+  padding: 0.625rem 0.875rem;
+  text-align: start;
+  vertical-align: top;
+}
+.article-body th {
+  font-weight: 500;
+}
+.article-body tr + tr,
+.article-body tbody tr {
+  border-top: 1px solid var(--nc-color-white);
+}
+.article-body td code {
+  background: var(--nc-color-white);
+}
+.article-body td:not(:has(code)) {
+  overflow-wrap: normal;
+}
+.article-body img[style*=max-width] {
+  height: auto;
+  width: 100%;
+}
+.article-body iframe {
+  max-width: 100%;
+}
+.article-body iframe[src*=youtube],
+.article-body iframe[src*=vimeo] {
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+}
+.article-body .step-content-wrapper > *,
+.article-body .step-content {
+  max-width: 100%;
+  min-width: 0;
+}
+.article-body figcaption {
+  background-color: transparent;
+  color: var(--nc-color-taupe);
+}
+.article-body img {
+  border-radius: 0.75rem;
+}
+
+.article-relatives {
+  border-top: 1px solid var(--nc-color-gray);
+}
+
+/***** Footer: grey panel and copyright line, like the nabucasa.com footer *****/
+.footer {
+  background: none;
+  border: 0;
+  margin: calc(var(--nc-section-gap) * 1.5) auto 0;
+  max-width: calc(1400px - var(--nc-gutter) * 2);
+  padding: 0;
+  width: calc(100% - var(--nc-gutter) * 2);
+}
+.footer a, .footer-language-selector button {
+  color: var(--nc-color-charcoal);
+  text-decoration: none;
+}
+.footer a:hover, .footer a:focus-visible, .footer-language-selector button:hover, .footer-language-selector button:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--nc-color-orange);
+}
+.footer-panel {
+  background-color: var(--nc-color-gray);
+  border-radius: var(--nc-radius-md);
+  padding: var(--nc-card-padding);
+}
+@media (min-width: 1024px) {
+  .footer-panel {
+    padding: 2rem 3rem;
+  }
+}
+.footer-links ul {
+  display: grid;
+  gap: 0.75rem var(--nc-section-gap);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 30rem) {
+  .footer-links ul {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+@media (min-width: 1024px) {
+  .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2.5rem;
+    justify-content: flex-end;
+  }
+}
+.footer-links a {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.footer-bottom {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem);
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem var(--nc-card-padding) var(--nc-gutter);
+}
+@media (min-width: 1024px) {
+  .footer-bottom {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/***** Search results page *****/
+@media (max-width: 768px) {
+  .sub-nav .search-container {
+    max-width: none;
+  }
+}
+.sub-nav .search-container .search input[type=search],
+.sub-nav .search-container .search .clear-button {
+  background-color: var(--nc-color-gray);
+  height: 44px;
+}
+
+.search-results-sidebar {
+  border-top: 0;
+}
+.search-results-sidebar .sidenav-title {
+  font-family: var(--nc-font-serif);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.search-results-sidebar .sidenav-item {
+  border-radius: 1.25rem;
+  display: flex;
+  gap: 0.375rem;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+.search-results-sidebar .sidenav-item:hover {
+  background-color: var(--nc-color-gray);
+}
+.search-results-sidebar .sidenav-item.current {
+  background-color: var(--nc-color-sun);
+  font-weight: 450;
+}
+.search-results-sidebar .filter-name {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.search-results-sidebar .multibrand-filter-list .doc-count {
+  color: var(--nc-color-taupe);
+}
+.search-results-subheading {
+  font-size: clamp(1.75rem, 1.5rem + 1.2vw, 2.375rem);
+  font-weight: 450;
+}
+.search-results-list > li {
+  border-color: var(--nc-color-gray);
+}
+
+.search-result-title {
+  font-size: 1.375rem;
+  font-weight: 450;
+}
+.search-result-title a {
+  color: var(--nc-color-charcoal);
+}
+.search-result-description em {
+  background-color: var(--nc-color-sun);
+  border-radius: 0.25rem;
+  font-style: normal;
+  padding: 0 0.15em;
+}
+
+/***** Consistent spacing *****/
+.container,
+.footer-inner {
+  padding-left: var(--nc-gutter);
+  padding-right: var(--nc-gutter);
+}
+
+.hero .container {
+  padding-left: var(--nc-card-padding);
+  padding-right: var(--nc-card-padding);
+}
+@media (min-width: 1024px) {
+  .hero .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.layout {
+  gap: var(--nc-stack-gap) var(--nc-section-gap);
+}
+
+@media (max-width: 768px) {
+  .layout > .column.sidebar {
+    margin-top: calc(var(--nc-section-gap) - var(--nc-stack-gap));
+  }
+}
+.item-cards {
+  gap: var(--nc-stack-gap);
+}
+.item-cards .item-card {
+  padding: var(--nc-card-padding);
+}
+.item-cards .item-card.small {
+  padding: 1.25rem var(--nc-card-padding);
+}
+.item-cards .item-card.product {
+  padding: 1.25rem;
+}
+
+main > .container > h2,
+.page-header {
+  margin: 0 0 1.25rem;
+}
+
+.page-header h2,
+.page-header .h2 {
+  margin-bottom: 0.5rem;
+}
+
+.page-header-description {
+  margin: 0 0 0.5rem;
+}
+
+.article-header {
+  margin-bottom: var(--nc-section-gap);
+}
+
+.article-author {
+  margin: 0.75rem 0 0;
+}
+
+.article-toc {
+  margin-bottom: var(--nc-section-gap);
+}
+
+.article-relatives {
+  margin-top: var(--nc-section-gap);
+  padding: var(--nc-section-gap) 0 0;
+}
+
+.search-wrapper {
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+}
+.search-wrapper form {
+  margin-bottom: 0;
+  min-width: 0;
+}
+.search-wrapper form + button {
+  flex-shrink: 0;
+  margin-left: 0;
+  order: 0;
+}
+@media (max-width: 768px) {
+  .search-wrapper input,
+  .search-wrapper form + button {
+    height: 48px;
+  }
+  .search-wrapper form + button {
+    padding: 0 1.25rem;
+  }
+}
+
+.search-results {
+  gap: var(--nc-section-gap);
+  margin-top: var(--nc-section-gap);
+}
+
+.container > .sub-nav {
+  margin-bottom: 0;
+  padding-top: var(--nc-gutter);
+}
+
+.container-divider {
+  display: none;
+}
+
+/***** User profile page *****/
+.profile-header {
+  background-color: var(--nc-color-gray);
+  border-radius: var(--nc-radius-md);
+  margin: var(--nc-gutter) auto var(--nc-section-gap);
+  max-width: calc(1400px - var(--nc-gutter) * 2);
+  padding: var(--nc-card-padding) 0;
+  width: calc(100% - var(--nc-gutter) * 2);
+}
+.profile-header .container {
+  padding-left: var(--nc-card-padding);
+  padding-right: var(--nc-card-padding);
+}
+.profile-header .basic-info .name {
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.1;
+}
+.profile-header .basic-info .name a {
+  color: inherit;
+}
+.profile-header .basic-info {
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.profile-header .options {
+  align-items: center;
+  flex-basis: 100%;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .profile-header .options {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .profile-header .options {
+    flex-basis: auto;
+    margin-left: 1rem;
+    margin-top: 0;
+  }
+}
+.profile-header .options > *,
+.profile-header .options > :not(:last-child) {
+  flex: 0 0 auto;
+  margin: 0;
+  width: auto;
+}
+.profile-header .profile-stats-activity {
+  border-top-color: var(--nc-color-white);
+}
+.profile-header .profile-stats-counters {
+  border-bottom-color: var(--nc-color-white);
+}
+.profile-header .stat-label {
+  color: var(--nc-color-taupe);
+}
+
+.profile-avatar {
+  margin-right: 1rem;
+}
+.profile-avatar .user-avatar {
+  border-radius: 50%;
+}
+
+.profile-private-badge {
+  align-items: center;
+  background-color: var(--nc-color-white);
+  border: 0;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+  display: inline-flex;
+  font-size: 0.875rem;
+  gap: 0.4rem;
+  height: 36px;
+  padding: 0 1rem;
+}
+.profile-private-badge .profile-private-icon {
+  line-height: 1;
+  margin: 0;
+}
+
+.split-button button {
+  border-radius: 100px;
+  font-size: 0.875rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1.25rem;
+  transition: box-shadow 220ms ease-out;
+  width: auto;
+}
+.split-button button, .split-button button:hover, .split-button button:focus, .split-button button:focus-visible, .split-button button:active {
+  background-color: var(--nc-color-charcoal);
+  border: 0;
+  color: var(--nc-color-white);
+}
+.split-button button:hover, .split-button button:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+
+[dir=ltr] .split-button button:not(:only-child):first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px 0 0 100px;
+}
+[dir=rtl] .split-button button:not(:only-child):first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0 100px 100px 0;
+}
+.split-button button:not(:only-child):last-child {
+  max-width: 40px;
+  min-width: 40px;
+  padding: 0;
+  width: 40px;
+}
+[dir=ltr] .split-button button:not(:only-child):last-child {
+  border-radius: 0 100px 100px 0;
+}
+[dir=rtl] .split-button button:not(:only-child):last-child {
+  border-radius: 100px 0 0 100px;
+}
+
+.community-follow button {
+  border-radius: 100px;
+  font-size: 0.875rem;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1rem;
+  transition: box-shadow 220ms ease-out;
+}
+.community-follow button, .community-follow button:hover, .community-follow button:focus, .community-follow button:active {
+  background-color: var(--nc-color-white);
+  border: 0;
+  color: var(--nc-color-charcoal);
+}
+.community-follow button:hover, .community-follow button:focus-visible {
+  box-shadow: 0 0 0 1px var(--nc-color-white), 0 0 0 2px var(--nc-color-white), 0 0 0 3px var(--nc-color-white);
+}
+.community-follow button::after {
+  border-left-color: var(--nc-color-gray);
+  color: var(--nc-color-taupe);
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  position: static;
+}
+.community-follow button[data-selected=true], .community-follow button[data-selected=true]:hover, .community-follow button[data-selected=true]:focus, .community-follow button[data-selected=true]:active {
+  background-color: var(--nc-color-charcoal);
+  color: var(--nc-color-white);
+}
+.community-follow button[data-selected=true]:hover, .community-follow button[data-selected=true]:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+.community-follow button[data-selected=true]::after {
+  border-left-color: rgba(255, 255, 255, 0.4);
+  color: var(--nc-color-white);
+}
+
+.profile-nav {
+  background-color: transparent;
+  border-bottom: 1px solid var(--nc-color-gray);
+  margin-bottom: var(--nc-section-gap);
+}
+.profile-nav .collapsible-nav-list li.current,
+.profile-nav .collapsible-nav-list li[aria-selected=true] {
+  font-weight: 450;
+}
+
+.collapsible-nav-list li.current,
+.collapsible-nav-list li[aria-selected=true] {
+  display: block;
+}
+
+.collapsible-nav-toggle {
+  z-index: 1;
+}
+
+.search:has(.search-icon) input[type=search],
+.search-container input[type=search] {
+  padding-left: 2.75rem !important;
+}
+
+/***** Requests page *****/
+.my-activities-header {
+  padding-top: var(--nc-section-gap);
+}
+.my-activities-header h1 {
+  font-size: clamp(2.25rem, 1.8rem + 2.2vw, 3.5rem);
+  font-weight: 450;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+.my-activities-sub-nav {
+  margin-bottom: var(--nc-section-gap);
+}
+.my-activities-sub-nav .collapsible-nav-border {
+  border-color: var(--nc-color-gray);
+}
+.my-activities-sub-nav .collapsible-nav-list li.current,
+.my-activities-sub-nav .collapsible-nav-list li[aria-selected=true] {
+  font-weight: 450;
+}
+
+.requests-table-toolbar {
+  gap: 1rem;
+}
+.requests-table-toolbar .search {
+  align-items: center;
+  position: relative;
+}
+.requests-table-toolbar .search .search-icon {
+  color: var(--nc-color-charcoal);
+  height: 16px;
+  left: 1rem;
+  width: 16px;
+}
+[dir=rtl] .requests-table-toolbar .search .search-icon {
+  left: auto;
+  right: 1rem;
+}
+.requests-table-toolbar .search input[type=search] {
+  background-color: var(--nc-color-gray);
+  border: 1px solid transparent;
+  border-radius: 100px;
+  font-size: 1rem;
+  height: 44px;
+}
+.requests-table-toolbar .search input[type=search]:focus {
+  border-color: var(--nc-color-charcoal);
+}
+.requests-table-toolbar .request-filter-label {
+  color: var(--nc-color-taupe);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+.requests-table-toolbar select {
+  background-color: var(--nc-color-gray);
+  background-position: right 1rem center;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: var(--nc-color-charcoal);
+  font-size: 1rem;
+  height: 44px;
+  max-height: none;
+  margin-bottom: 0;
+  min-width: 10rem;
+  padding: 0 2.5rem 0 1.25rem;
+}
+.requests-table-toolbar select:focus {
+  border-color: var(--nc-color-charcoal);
+}
+.requests-table-toolbar .organization-subscribe button {
+  height: 44px;
+  max-height: none;
+}
+.requests-table-toolbar .organization-subscribe:empty {
+  display: none;
+}
+.requests-table-toolbar + .requests {
+  margin-top: var(--nc-section-gap);
+}
+
+.requests-table th,
+.requests-table th a {
+  color: var(--nc-color-taupe);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.requests-table th a:hover {
+  color: var(--nc-color-charcoal);
+}
+.requests-table th,
+.requests-table td {
+  border-bottom-color: var(--nc-color-gray);
+}
+.requests-table .striped-list-title {
+  color: var(--nc-color-charcoal);
+  font-weight: 450;
+}
+
+.status-label {
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 450;
+  padding: 4px 12px;
+}
+
+.layout > .column,
+.section-container > * {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.section-container > * {
+  flex: 1 1 auto;
+}
+
+/***** Submit a request form *****/
+#new-request-form button[type=submit] {
+  border-radius: 100px;
+  height: 44px;
+  padding: 0 1.75rem;
+  transition: box-shadow 220ms ease-out;
+}
+#new-request-form button[type=submit]:hover, #new-request-form button[type=submit]:focus-visible {
+  box-shadow: var(--nc-ring);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/***** Article table of contents *****/
+.article-toc {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+}
+.article-toc[hidden] {
+  display: none;
+}
+.article-toc-details {
+  background-color: var(--nc-color-gray);
+  border-radius: var(--nc-radius-md);
+  padding: 1rem 1.25rem;
+}
+.article-toc-title {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--nc-font-serif);
+  font-size: 1.125rem;
+  font-weight: 300;
+  justify-content: space-between;
+  list-style: none;
+}
+.article-toc-title::-webkit-details-marker {
+  display: none;
+}
+.article-toc-chevron {
+  transition: transform 220ms ease-out;
+}
+.article-toc-details[open] .article-toc-chevron {
+  transform: rotate(180deg);
+}
+.article-toc-nav {
+  margin-top: 0.75rem;
+}
+.article-toc-list, .article-toc-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.article-toc-sublist {
+  margin: 0.125rem 0 0.25rem;
+  padding-left: 0.875rem;
+}
+[dir=rtl] .article-toc-sublist {
+  padding-left: 0;
+  padding-right: 0.875rem;
+}
+.article-toc-link {
+  border-radius: 0.5rem;
+  color: var(--nc-color-charcoal);
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  padding: 0.375rem 0.5rem 0.375rem 1.125rem;
+  position: relative;
+  text-decoration: none;
+  transition: background-color 180ms ease-out;
+}
+[dir=rtl] .article-toc-link {
+  padding: 0.375rem 1.125rem 0.375rem 0.5rem;
+}
+.article-toc-link::before {
+  background-color: var(--nc-color-charcoal);
+  border-radius: 50%;
+  content: "";
+  height: 0.4rem;
+  left: 0.4rem;
+  opacity: 0;
+  position: absolute;
+  top: 0.85em;
+  transition: opacity 180ms ease-out;
+  width: 0.4rem;
+}
+[dir=rtl] .article-toc-link::before {
+  left: auto;
+  right: 0.4rem;
+}
+.article-toc-link:hover, .article-toc-link:focus-visible {
+  background-color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+.article-toc-link[aria-current=location] {
+  background-color: var(--nc-color-sun);
+  font-weight: 450;
+}
+.article-toc-link[aria-current=location]::before {
+  opacity: 1;
+}
+.article-toc-item-sub .article-toc-link {
+  color: #4a4a45;
+  font-size: 0.875rem;
+}
+.article-toc-top {
+  border-top: 1px solid var(--nc-color-white);
+  color: var(--nc-color-charcoal);
+  display: none;
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}
+@media (min-width: 1200px) {
+  .article-toc {
+    margin-bottom: 0;
+    position: sticky;
+    top: 1.5rem;
+    max-height: calc(100vh - 3rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .article-toc-details {
+    background-color: transparent;
+    padding: 0;
+  }
+  .article-toc-title {
+    cursor: default;
+    padding-left: 0.5rem;
+  }
+  .article-toc-chevron {
+    display: none;
+  }
+  .article-toc-nav {
+    border-left: 1px solid var(--nc-color-gray);
+    padding-left: 0.5rem;
+  }
+  [dir=rtl] .article-toc-nav {
+    border-left: 0;
+    border-right: 1px solid var(--nc-color-gray);
+    padding-left: 0;
+    padding-right: 0.5rem;
+  }
+  .article-toc-link:hover, .article-toc-link:focus-visible {
+    background-color: var(--nc-color-gray);
+  }
+  .article-toc-top {
+    border-top: 0;
+    display: inline-block;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .article-layout.has-toc {
+    align-items: start;
+    display: grid;
+    gap: 1rem 2.5rem;
+    grid-template-columns: 240px minmax(0, 1fr) 300px;
+  }
+}
+.article-body h2,
+.article-body h3 {
+  scroll-margin-top: 1.5rem;
+}
+
+/***** Home page category cards *****/
+.categories.blocks {
+  container-type: inline-size;
+}
+
+.category-cards {
+  display: grid;
+  gap: var(--nc-stack-gap);
+  grid-auto-rows: minmax(28rem, auto);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 768px) {
+  .category-cards {
+    grid-auto-rows: minmax(32rem, auto);
+    grid-template-columns: minmax(0, 40rem);
+  }
+}
+
+@container (min-width: 46rem) {
+  .category-cards {
+    grid-auto-rows: minmax(clamp(18rem, 26vw, 25rem), auto) auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .category-cards > .category-card {
+    display: grid;
+    grid-row: span 2;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+  .category-cards > .category-card::before {
+    grid-row: 1;
+  }
+  .category-cards .category-card-content {
+    grid-row: 2;
+  }
+  .category-cards > .category-card[data-name="Home Assistant Cloud"] {
+    grid-column: span 2;
+  }
+}
+.category-card {
+  --card-title-color: var(--nc-color-white);
+  order: 100;
+  background-color: var(--nc-color-gray);
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--nc-radius-md);
+  color: var(--nc-color-charcoal);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0.75rem;
+  position: relative;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .category-card {
+    padding: 1rem;
+  }
+}
+.category-card:hover, .category-card:focus-visible {
+  color: var(--nc-color-charcoal);
+  text-decoration: none;
+}
+.category-card[data-name="Home Assistant Cloud"] {
+  --card-title-color: var(--nc-color-gray);
+  order: 1;
+  background-image: url($assets-category-cloud-webp);
+  background-position: 90% 30%;
+}
+.category-card[data-name="Home Assistant Green"] {
+  --card-title-color: var(--nc-color-green);
+  order: 2;
+  background-image: url($assets-category-green-webp);
+}
+.category-card[data-name="Home Assistant Connect ZBT-2"] {
+  --card-title-color: var(--nc-color-tin);
+  order: 3;
+  background-image: linear-gradient(90deg, #beac9e, #897764);
+}
+.category-card[data-name="Home Assistant Connect ZBT-2"]::before {
+  background: url($assets-category-connect-zbt-2-webp) center bottom/cover no-repeat;
+  content: "";
+  flex: 1 1 auto;
+  margin: -0.75rem -0.75rem 0;
+}
+@media (min-width: 768px) {
+  .category-card[data-name="Home Assistant Connect ZBT-2"]::before {
+    margin: -1rem -1rem 0;
+  }
+}
+.category-card[data-name="Home Assistant Connect ZWA-2"] {
+  --card-title-color: var(--nc-color-tin);
+  order: 4;
+  background-image: linear-gradient(90deg, #ad9b8e, #625546);
+}
+.category-card[data-name="Home Assistant Connect ZWA-2"]::before {
+  background: url($assets-category-connect-zwa-2-webp) center bottom/cover no-repeat;
+  content: "";
+  flex: 1 1 auto;
+  margin: -0.75rem -0.75rem 0;
+}
+@media (min-width: 768px) {
+  .category-card[data-name="Home Assistant Connect ZWA-2"]::before {
+    margin: -1rem -1rem 0;
+  }
+}
+.category-card[data-name="Home Assistant Voice Preview Edition"] {
+  --card-title-color: var(--nc-color-orange);
+  order: 5;
+  background-image: url($assets-category-voice-preview-edition-webp);
+}
+.category-card[data-name="Home Assistant Connect ZBT-1"] {
+  --card-title-color: var(--nc-color-tin);
+  order: 6;
+  background-image: url("https://www.home-assistant.io/images/frontpage/feature-zbt1.jpg");
+}
+.category-card[data-name="Home Assistant Yellow"] {
+  --card-title-color: var(--nc-color-sun);
+  order: 7;
+  background-image: url("https://www.home-assistant.io/images/frontpage/yellow-frontpage.jpg");
+}
+.category-card-content {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .category-card-content {
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.category-card-title, .category-card-description {
+  border-radius: var(--nc-radius-md);
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .category-card-title, .category-card-description {
+    padding: 1.25rem;
+  }
+}
+.category-card-title {
+  background-color: var(--card-title-color);
+}
+.category-card-title h3 {
+  font-size: clamp(1.125rem, 0.9rem + 0.9vw, 1.75rem);
+  font-weight: 450;
+  line-height: 1.1;
+  margin: 0;
+}
+.category-card-description {
+  background-color: var(--nc-color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.category-card-description p {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .category-card-description p {
+    font-size: 0.9375rem;
+  }
+}
+.category-card-cta {
+  align-items: center;
+  align-self: flex-end;
+  background-color: var(--nc-color-charcoal);
+  border-radius: 100px;
+  color: var(--nc-color-white);
+  display: inline-flex;
+  font-size: 0.8125rem;
+  gap: 0.5rem;
+  height: 2.25rem;
+  padding: 0 0.5rem 0 0.875rem;
+  transition: box-shadow 220ms ease-out;
+  white-space: nowrap;
+}
+.category-card-cta::after {
+  background: no-repeat center/60% url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 11.085H20M13 4.085L20 11.085L13 18.085' stroke='%23ECEBE7' stroke-width='2.33'/%3E%3C/svg%3E");
+  content: "";
+  height: 1.25rem;
+  transition: transform 220ms ease-out;
+  width: 1.25rem;
+}
+.category-card:hover .category-card-cta, .category-card:focus-visible .category-card-cta {
+  box-shadow: var(--nc-ring);
+}
+.category-card:hover .category-card-cta::after, .category-card:focus-visible .category-card-cta::after {
+  transform: translateX(12%);
+}
+
+.hero.hero-home {
+  background-color: var(--nc-color-tin);
+}
+
+@media (max-width: 1279px) {
+  .home-layout {
+    flex-direction: column;
+  }
+  .home-layout > .column {
+    flex: none;
+    width: 100%;
+  }
+  .home-layout > .column.sidebar {
+    flex: 1 1 auto;
+    margin-top: calc(var(--nc-section-gap) - var(--nc-stack-gap));
+  }
+}
+@media (max-width: 1279px) and (min-width: 768px) {
+  .home-layout > .column.sidebar .item-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.hero-hardware {
+  display: none;
+}
+
+.hardware-view .hero-default,
+.hardware-view .category-card[data-name="Home Assistant Cloud"],
+.hardware-view .knowledge-base .articles {
+  display: none;
+}
+.hardware-view .hero-hardware {
+  display: revert;
 }

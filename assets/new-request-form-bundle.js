@@ -1,4 +1,4 @@
-import { j as jsxRuntimeExports, F as Field, L as Label, S as Span, H as Hint, I as Input$1, M as Message, r as reactExports, u as useToast, a as useTranslation, N as Notification, T as Title, C as Close, s as styled, b as Textarea, d as Field$1, e as Label$1, f as Hint$1, h as Combobox, O as Option, i as Message$1, k as Checkbox$1, l as OptGroup, p as purify, m as FileList, n as File, o as Tooltip, P as Progress, A as Anchor, q as mime, t as useDropzone, v as FileUpload, D as Datepicker, w as useGrid, K as KEYS, x as focusStyles, y as FauxInput, z as Tag, B as SvgAlertWarningStroke, E as MediaInput, G as SvgCreditCardStroke, $ as $e, J as getColorV8, Q as Header, R as SvgCheckCircleStroke, U as useModalContainer, V as Modal, W as Body, X as Accordion, Y as Paragraph, Z as Footer$1, _ as FooterItem, a0 as Button, a1 as Close$1, a2 as addFlashNotification, a3 as debounce, a4 as Alert, a5 as initI18next, a6 as loadTranslations, a7 as reactDomExports, a8 as ThemeProviders, a9 as createTheme } from 'shared';
+import { j as jsxRuntimeExports, F as Field, L as Label, S as Span, H as Hint, I as Input$1, M as Message, r as reactExports, u as useToast, a as useTranslation, N as Notification, T as Title, C as Close, s as styled, b as Textarea, d as Field$1, e as Label$1, f as Hint$1, g as Combobox, O as Option, h as Message$1, i as Checkbox$1, k as OptGroup, p as purify_default, l as FileList, m as File, n as Tooltip, P as Progress, A as Anchor, o as mime, q as useDropzone, t as FileUpload, D as Datepicker, v as useGrid, K as KEYS, w as focusStyles, x as FauxInput, y as Tag, z as SvgAlertWarningStroke, B as MediaInput, E as SvgCreditCardStroke, $ as $e, G as getColorV8, J as Header, Q as SvgCheckCircleStroke, R as useModalContainer, U as Modal, V as Body, W as Accordion, X as Paragraph, Y as Footer$1, Z as FooterItem, _ as Button, a0 as Close$1, a1 as addFlashNotification, a2 as debounce, a3 as Alert, a4 as initI18next, a5 as loadTranslations, a6 as reactDomExports, a7 as ThemeProviders, a8 as createTheme } from 'shared';
 
 function Input({ field, onChange }) {
     const { label, error, value, name, required, description, type } = field;
@@ -443,7 +443,7 @@ function getPrefilledTicketFields(fields) {
         const field = getFieldFromId(ticketFieldId, prefilledFields);
         if (!field)
             continue;
-        const sanitizedValue = purify.sanitize(value, {
+        const sanitizedValue = purify_default.sanitize(value, {
             ALLOWED_TAGS: ALLOWED_HTML_TAGS,
         });
         switch (field.type) {
