@@ -1,5 +1,6 @@
-* @zendesk/vikings
-
-# LOCALIZATION
-**/translations/en-us.yml   @zendesk/localization
-translations.yml            @zendesk/localization
+# Repository files
+.devcontainer.json @NabuCasa/product-and-marketing
+.github/ @NabuCasa/product-and-marketing
+.nvmrc @NabuCasa/product-and-marketing
+netlify.toml @NabuCasa/product-and-marketing
+package.json @NabuCasa/product-and-marketing
