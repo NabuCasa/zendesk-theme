@@ -7377,10 +7377,10 @@ main > .container > h2,
 .category-card[data-name="Home Assistant Connect AUX-2"] {
   --card-title-color: var(--nc-color-tin);
   order: 3;
-  background-image: linear-gradient(90deg, #8a7e70, #8a7e70);
+  background-image: linear-gradient(90deg, #958779, #958779);
 }
 .category-card[data-name="Home Assistant Connect AUX-2"]::before {
-  background: linear-gradient(to bottom, transparent 55%, #8a7e70), url($assets-category-connect-aux-2-webp) center/cover no-repeat;
+  background: linear-gradient(to bottom, transparent 55%, #958779), url($assets-category-connect-aux-2-webp) center/cover no-repeat;
   content: "";
   flex: 1 1 auto;
   margin: -0.75rem -0.75rem 0;
