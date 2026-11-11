@@ -1533,7 +1533,7 @@ section.section.hero[data-category="Home Assistant Connect ZWA-2"] [data-descrip
 
 main > .visibility-hidden:has(ol li a[href$=Connect-AUX-2]) + section.hero,
 section.section.hero[data-category="Home Assistant Connect AUX-2"] {
-  background-image: url("https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-aux-2.webp");
+  background-image: url($assets-category-connect-aux-2-webp);
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
@@ -1686,7 +1686,7 @@ section.section.hero[data-category="Home Assistant Connect ZWA-2"] .hero-inner {
   color: #fff;
 }
 section.section.hero[data-category="Home Assistant Connect AUX-2"] {
-  background-image: url("https://raw.githubusercontent.com/NabuCasa/support/refs/heads/main/static/img/hero-aux-2.webp");
+  background-image: url($assets-category-connect-aux-2-webp);
 }
 section.section.hero[data-category="Home Assistant Connect AUX-2"]:after {
   content: "";
@@ -7377,7 +7377,18 @@ main > .container > h2,
 .category-card[data-name="Home Assistant Connect AUX-2"] {
   --card-title-color: var(--nc-color-tin);
   order: 3;
-  background-image: url($assets-category-connect-aux-2-webp);
+  background-image: linear-gradient(90deg, #8e8174, #8e8174);
+}
+.category-card[data-name="Home Assistant Connect AUX-2"]::before {
+  background: linear-gradient(to bottom, transparent 55%, #8e8174), url($assets-category-connect-aux-2-webp) center/cover no-repeat;
+  content: "";
+  flex: 1 1 auto;
+  margin: -0.75rem -0.75rem 0;
+}
+@media (min-width: 768px) {
+  .category-card[data-name="Home Assistant Connect AUX-2"]::before {
+    margin: -1rem -1rem 0;
+  }
 }
 .category-card[data-name="Home Assistant Connect ZBT-2"] {
   --card-title-color: var(--nc-color-tin);

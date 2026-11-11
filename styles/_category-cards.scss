@@ -15,7 +15,9 @@ $category-cards: (
   // The phone sits right of centre in this photo; keep it in view on narrow cards
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
-  "Connect AUX-2": (image: url($assets-category-connect-aux-2-webp), color: var(--nc-color-tin)),
+  // Studio shot cropped with the device in the exact centre: shown above the
+  // boxes, centred, with its floor fading into the colour behind the boxes
+  "Connect AUX-2": (image: url($assets-category-connect-aux-2-webp), color: var(--nc-color-tin), floor: (#8e8174, #8e8174), position: center, fade: true),
   "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#beac9e, #897764)),
   "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#ad9b8e, #625546)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
@@ -115,9 +117,18 @@ $home-sidebar-width: 1280px;
         background-image: linear-gradient(90deg, nth($floor, 1), nth($floor, 2));
 
         // The photo is a wide crop with plain backdrop either side, so at any card
-        // width it can be scaled to its full height and the whole device stays in view
+        // width it can be scaled to its full height and the whole device stays in
+        // view. With `fade`, its bottom fades into the floor colour so a centred
+        // photo meets the boxes without a seam.
         &::before {
-          background: map-get($card, image) center bottom / cover no-repeat;
+          $position: if(map-has-key($card, position), map-get($card, position), center bottom);
+
+          @if map-get($card, fade) {
+            background: linear-gradient(to bottom, transparent 55%, nth($floor, 1)), map-get($card, image) $position / cover no-repeat;
+          } @else {
+            background: map-get($card, image) $position / cover no-repeat;
+          }
+
           content: "";
           flex: 1 1 auto;
           margin: -0.75rem -0.75rem 0;
