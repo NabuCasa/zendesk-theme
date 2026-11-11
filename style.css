@@ -2359,15 +2359,15 @@ section.section.hero[data-category="Home Assistant Cloud"] ~ .container .layout 
   background-image: url("https://www.home-assistant.io/images/frontpage/zwa-2-frontpage.webp");
 }
 .item-cards .item-card.product-connect-aux-2 {
-  background-image: url();
+  background-image: url("https://www.home-assistant.io/images/frontpage/aux-2-frontpage.webp");
 }
 .item-cards .item-card.product-cloud {
   background-image: url();
 }
-.item-cards .item-card.product.product-connect-zwa-2:before {
+.item-cards .item-card.product.product-connect-zwa-2:before, .item-cards .item-card.product.product-connect-aux-2:before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
-.item-cards .item-card.product.product-connect-zwa-2 .item-card-details {
+.item-cards .item-card.product.product-connect-zwa-2 .item-card-details, .item-cards .item-card.product.product-connect-aux-2 .item-card-details {
   justify-content: flex-start;
 }
 .item-cards .item-card-details {
