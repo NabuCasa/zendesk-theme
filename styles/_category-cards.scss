@@ -15,6 +15,7 @@ $category-cards: (
   // The phone sits right of centre in this photo; keep it in view on narrow cards
   "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
+  "Connect AUX-2": (image: url($assets-category-connect-aux-2-webp), color: var(--nc-color-tin)),
   "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#beac9e, #897764)),
   "Connect ZWA-2": (image: url($assets-category-connect-zwa-2-webp), color: var(--nc-color-tin), floor: (#ad9b8e, #625546)),
   "Voice Preview Edition": (image: url($assets-category-voice-preview-edition-webp), color: var(--nc-color-orange)),
