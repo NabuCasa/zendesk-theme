@@ -549,11 +549,11 @@ section.section.hero {
   }
 }
 
-// Home Assistant Cloud has no product photo, so its masthead (on the category
+// Home Assistant Link has no product photo, so its masthead (on the category
 // page and on the sections and articles inside it) is plain tin blue, like the
 // home page masthead
-main > .visibility-hidden:has(ol li a[href$="Cloud"]) + section.hero,
-section.section.hero[data-category="Home Assistant Cloud"] {
+main > .visibility-hidden:has(ol li a[href$="Link"]) + section.hero,
+section.section.hero[data-category="Home Assistant Link"] {
   background-color: var(--nc-color-tin);
   background-image: none;
 

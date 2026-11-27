@@ -13,7 +13,7 @@
 // bottom edge.
 $category-cards: (
   // The phone sits right of centre in this photo; keep it in view on narrow cards
-  "Cloud": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
+  "Link": (image: url($assets-category-cloud-webp), color: var(--nc-color-gray), position: 90% 30%),
   "Green": (image: url($assets-category-green-webp), color: var(--nc-color-green)),
   "Connect AUX-2": (image: url($assets-category-connect-aux-2-webp), color: var(--nc-color-tin)),
   "Connect ZBT-2": (image: url($assets-category-connect-zbt-2-webp), color: var(--nc-color-tin), floor: (#beac9e, #897764)),
@@ -70,8 +70,8 @@ $home-sidebar-width: 1280px;
       grid-row: 2;
     }
 
-    // Cloud leads as a double-width card, as the first card does on nabucasa.com
-    > .category-card[data-name="Home Assistant Cloud"] {
+    // Link leads as a double-width card, as the first card does on nabucasa.com
+    > .category-card[data-name="Home Assistant Link"] {
       grid-column: span 2;
     }
   }
@@ -257,7 +257,7 @@ $home-sidebar-width: 1280px;
 }
 
 // Hardware-only view of the home page (/hc/en-us?hardware): the hero and
-// heading switch to hardware wording, and Cloud and the promoted articles are
+// heading switch to hardware wording, and Link and the promoted articles are
 // left out. The class is set by a script at the top of home_page.hbs.
 .hero-hardware {
   display: none;
@@ -265,7 +265,7 @@ $home-sidebar-width: 1280px;
 
 .hardware-view {
   .hero-default,
-  .category-card[data-name="Home Assistant Cloud"],
+  .category-card[data-name="Home Assistant Link"],
   .knowledge-base .articles {
     display: none;
   }
